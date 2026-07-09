@@ -1,26 +1,140 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --azva-canvas: #f8f4ee;
+  --azva-surface: #fffaf2;
+  --azva-primary: #1e2a38;
+  --azva-primary-soft: #263647;
+  --azva-accent: #b56e46;
+  --azva-moss: #6d8b74;
+  --azva-carbon: #0e0e0e;
+  --azva-muted: #746f68;
+  --azva-border: rgba(30, 42, 56, 0.14);
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
+  --radius-xl: 40px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--azva-canvas);
+  color: var(--azva-carbon);
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--azva-accent);
+  color: var(--azva-canvas);
+}
+
+.container-azva {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.section-azva {
+  padding: 112px 0;
+}
+
+.eyebrow {
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--azva-accent);
+  font-weight: 600;
+}
+
+.display-xl {
+  font-size: clamp(3.5rem, 8vw, 8rem);
+  line-height: 0.92;
+  letter-spacing: -0.07em;
+  color: var(--azva-primary);
+}
+
+.display-lg {
+  font-size: clamp(2.6rem, 5.8vw, 5.8rem);
+  line-height: 0.96;
+  letter-spacing: -0.055em;
+  color: var(--azva-primary);
+}
+
+.heading-xl {
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.045em;
+  color: var(--azva-primary);
+}
+
+.body-lg {
+  font-size: clamp(1.08rem, 1.4vw, 1.35rem);
+  line-height: 1.65;
+  color: rgba(14, 14, 14, 0.78);
+}
+
+.body-md {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(14, 14, 14, 0.72);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--azva-primary);
+  color: var(--azva-canvas);
+  padding: 14px 22px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 220ms ease;
+}
+
+.btn-primary:hover {
+  background: var(--azva-accent);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid var(--azva-border);
+  color: var(--azva-primary);
+  padding: 14px 22px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 220ms ease;
+}
+
+.btn-secondary:hover {
+  border-color: var(--azva-accent);
+  color: var(--azva-accent);
+}
+
+.card-azva {
+  border: 1px solid var(--azva-border);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 250, 242, 0.68);
+}
+
+.dark-section {
+  background: var(--azva-primary);
+  color: var(--azva-canvas);
+}
+
+@media (max-width: 768px) {
+  .section-azva {
+    padding: 72px 0;
+  }
+
+  .container-azva {
+    width: min(100% - 28px, 1120px);
+  }
 }
