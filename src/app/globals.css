@@ -217,3 +217,67 @@ body {
   color: var(--azva-accent);
   text-decoration-color: var(--azva-accent);
 }
+
+@media (max-width: 1024px) {
+  .display-xl {
+    font-size: clamp(4rem, 13vw, 7rem);
+    line-height: 0.9;
+  }
+
+  .section-azva {
+    padding: 88px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .display-xl {
+    font-size: clamp(3.4rem, 17vw, 5.4rem);
+    line-height: 0.88;
+    letter-spacing: -0.075em;
+  }
+
+  .display-lg,
+  .heading-xl {
+    font-size: clamp(2.4rem, 10vw, 3.7rem);
+    line-height: 0.98;
+  }
+
+  .body-lg {
+    font-size: 1.06rem;
+    line-height: 1.7;
+  }
+
+  .body-md {
+    font-size: 0.98rem;
+    line-height: 1.68;
+  }
+
+  .eyebrow,
+  .azva-section-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-azva {
+    width: min(100% - 24px, 1120px);
+  }
+
+  .section-azva {
+    padding: 68px 0;
+  }
+
+  .display-xl {
+    font-size: clamp(3rem, 18vw, 4.6rem);
+  }
+
+  .heading-xl {
+    font-size: clamp(2.1rem, 11vw, 3.2rem);
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+}

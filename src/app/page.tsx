@@ -48,7 +48,7 @@ export default function Home() {
     <main>
       <Navbar />
 
-      <section className="min-h-screen pt-36 md:pt-44">
+      <section className="min-h-[92vh] pt-32 md:min-h-screen md:pt-44">
         <div className="container-azva grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
           <FadeIn>
             <div>
@@ -136,7 +136,7 @@ export default function Home() {
               {capabilities.map((item, index) => (
                 <Lift
                   key={item.title}
-                  className="grid gap-6 py-10 md:grid-cols-[0.15fr_0.35fr_0.5fr] md:items-start"
+                  className="grid gap-4 py-9 md:gap-6 md:py-10 md:grid-cols-[0.15fr_0.35fr_0.5fr] md:items-start"
                 >
                   <div className="text-sm text-[var(--azva-accent)]">
                     {String(index + 1).padStart(2, "0")}
@@ -225,7 +225,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="mt-14 grid gap-4 md:grid-cols-4">
+            <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {prizmScores.map(([score, label]) => (
                 <div
                   key={score}
