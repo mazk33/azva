@@ -138,10 +138,12 @@ export default function Home() {
       <FadeIn>
         <section id="thinking" className="section-azva azva-chapter dark-section">
           <div className="container-azva">
-            <p className="eyebrow mb-6 text-[var(--azva-accent)]">How We Think</p>
-            <h2 className="heading-xl max-w-4xl text-[var(--azva-canvas)]">
-              Strategy without alignment creates motion. Alignment creates momentum.
-            </h2>
+            <SectionHeader
+              label="How We Think"
+              title="Strategy without alignment creates motion. Alignment creates momentum."
+              index="03"
+              theme="dark"
+            />
 
             <div className="mt-16 grid gap-6 md:grid-cols-2">
               {principles.map(([title, copy]) => (
@@ -160,15 +162,34 @@ export default function Home() {
         </section>
       </FadeIn>
 
-      <FadeIn>
+      <Reveal>
         <section id="ventures" className="section-azva azva-chapter">
-          <SectionHeader
-            label="Ventures"
-            title="Some opportunities deserve more than advice."
-            index="04"
-          />
+          <div className="container-azva grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
+            <SectionHeader
+              label="Ventures"
+              title="Some opportunities deserve more than advice."
+              index="04"
+            />
+
+            <div className="space-y-6 body-lg">
+              <p>
+                AZVA selectively partners with founders and leadership teams where values,
+                ambition, and execution are deeply aligned.
+              </p>
+
+              <p>
+                These relationships may extend beyond advisory into strategic partnerships,
+                advisory equity, investment readiness, select investor introductions, and
+                direct investment in exceptional opportunities.
+              </p>
+
+              <p className="max-w-2xl font-[var(--font-fraunces)] text-3xl italic leading-tight text-[var(--azva-primary)]">
+                We do not invest in ideas. We invest in conviction, capability, and alignment.
+              </p>
+            </div>
+          </div>
         </section>
-      </FadeIn>
+      </Reveal>
 
       <FadeIn>
         <section id="prizm" className="section-azva azva-chapter bg-[var(--azva-primary)] text-[var(--azva-canvas)]">
@@ -207,16 +228,21 @@ export default function Home() {
           <div className="container-azva grid gap-12 lg:grid-cols-[0.7fr_1.3fr]">
             <div>
               <Image
-                src="/brand/maz-headshot.jpeg"
+                src="/brand/maz-headshot.png"
                 alt="Mazhar Khan"
                 width={420}
                 height={560}
                 className="aspect-[4/5] w-full object-cover"
               />
             </div>
+
             <div>
-              <p className="eyebrow mb-6">Founder</p>
-              <h2 className="heading-xl">Built from experience. Driven by purpose.</h2>
+              <SectionHeader
+                label="Founder"
+                title="Built from experience. Driven by purpose."
+                index="06"
+              />
+
               <div className="mt-8 space-y-6 body-lg">
                 <p>
                   AZVA is the culmination of decades spent leading enterprise transformation, AI
@@ -227,8 +253,7 @@ export default function Home() {
                   It was built on a simple belief: the greatest competitive advantage is alignment.
                 </p>
                 <p>
-                  When purpose, people, systems, and execution move together, sustainable value
-                  follows.
+                  When purpose, people, systems, and execution move together, sustainable value follows.
                 </p>
               </div>
             </div>
