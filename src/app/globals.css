@@ -288,3 +288,30 @@ body {
     min-height: 52px;
   }
 }
+
+@media (max-width: 640px) {
+  .display-xl {
+    font-size: clamp(3.2rem, 15vw, 4.5rem);
+    line-height: 0.92;
+    letter-spacing: -0.07em;
+  }
+
+  .display-lg {
+    font-size: clamp(3rem, 13vw, 4.2rem);
+    line-height: 0.95;
+  }
+
+  .heading-xl {
+    font-size: clamp(2.3rem, 10vw, 3.4rem);
+    line-height: 1;
+    letter-spacing: -0.06em;
+  }
+
+  .section-azva {
+    padding: 76px 0;
+  }
+
+  .azva-chapter::before {
+    width: min(100% - 24px, 1120px);
+  }
+}

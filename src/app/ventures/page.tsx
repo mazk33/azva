@@ -51,7 +51,7 @@ export default function VenturesPage() {
     <main>
       <Navbar />
 
-      <section className="min-h-[72vh] pt-40 md:pt-48">
+      <section className="min-h-[56vh] pt-36 md:pt-44">
         <div className="container-azva">
           <p className="eyebrow mb-8">Ventures</p>
 
