@@ -102,7 +102,7 @@ export default function Home() {
       </section>
 
       <FadeIn>
-        <section id="approach" className="section-azva border-t border-[var(--azva-border)]">
+        <section id="approach" className="section-azva azva-chapter border-t border-[var(--azva-border)]">
           <div className="container-azva grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
             <p className="eyebrow">Approach</p>
             <div>
@@ -125,7 +125,7 @@ export default function Home() {
       </FadeIn>
 
       <FadeIn>
-        <section id="disciplines" className="section-azva border-t border-[var(--azva-border)]">
+        <section id="disciplines" className="section-azva azva-chapter border-t border-[var(--azva-border)]">
           <div className="container-azva">
             <div className="max-w-3xl">
               <p className="eyebrow mb-6">Disciplines</p>
@@ -153,7 +153,7 @@ export default function Home() {
       </FadeIn>
 
       <FadeIn>
-        <section id="thinking" className="section-azva dark-section">
+        <section id="thinking" className="section-azva azva-chapter dark-section">
           <div className="container-azva">
             <p className="eyebrow mb-6 text-[var(--azva-accent)]">How We Think</p>
             <h2 className="heading-xl max-w-4xl text-[var(--azva-canvas)]">
@@ -178,7 +178,7 @@ export default function Home() {
       </FadeIn>
 
       <FadeIn>
-        <section id="ventures" className="section-azva">
+        <section id="ventures" className="section-azva azva-chapter">
           <div className="container-azva grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
             <div>
               <p className="eyebrow mb-6">Ventures</p>
@@ -203,7 +203,7 @@ export default function Home() {
       </FadeIn>
 
       <FadeIn>
-        <section id="prizm" className="section-azva bg-[var(--azva-primary)] text-[var(--azva-canvas)]">
+        <section id="prizm" className="section-azva azva-chapter bg-[var(--azva-primary)] text-[var(--azva-canvas)]">
           <div className="container-azva">
             <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
               <div>
@@ -243,7 +243,7 @@ export default function Home() {
       </FadeIn>
 
       <FadeIn>
-        <section id="about" className="section-azva">
+        <section id="about" className="section-azva azva-chapter">
           <div className="container-azva grid gap-12 lg:grid-cols-[0.7fr_1.3fr]">
             <div>
               <Image
@@ -281,7 +281,7 @@ export default function Home() {
       </SectionClosing>
 
       <FadeIn>
-        <section id="contact" className="section-azva border-t border-[var(--azva-border)]">
+        <section id="contact" className="section-azva azva-chapter border-t border-[var(--azva-border)]">
           <div className="container-azva grid items-end gap-12 lg:grid-cols-[1fr_0.9fr]">
             <div>
               <p className="eyebrow mb-6">Contact</p>

@@ -171,3 +171,49 @@ body {
 .azva-muted-text {
   color: rgba(14, 14, 14, 0.62);
 }
+
+.azva-chapter {
+  position: relative;
+}
+
+.azva-chapter::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: min(1120px, calc(100% - 40px));
+  height: 1px;
+  transform: translateX(-50%);
+  background: var(--azva-border);
+}
+
+.azva-section-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--azva-accent);
+  font-weight: 600;
+}
+
+.azva-editorial-text {
+  max-width: 760px;
+  font-size: clamp(1.08rem, 1.35vw, 1.32rem);
+  line-height: 1.72;
+  color: rgba(14, 14, 14, 0.76);
+}
+
+.azva-institutional-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--azva-primary);
+  text-decoration: underline;
+  text-decoration-color: var(--azva-border);
+  text-underline-offset: 8px;
+  transition: color 220ms ease, text-decoration-color 220ms ease;
+}
+
+.azva-institutional-link:hover {
+  color: var(--azva-accent);
+  text-decoration-color: var(--azva-accent);
+}
