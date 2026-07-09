@@ -2,27 +2,28 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { ButtonLink } from "@/components/ui/button";
 
 const capabilities = [
   {
     title: "Strategic Advisory",
-    copy: "Helping leaders navigate high-consequence decisions with clarity, perspective, and long-term thinking.",
+    copy: "High-consequence decisions need more than analysis. AZVA helps leaders clarify direction, evaluate tradeoffs, and move with disciplined conviction.",
   },
   {
     title: "Enterprise Transformation",
-    copy: "Designing organizations that scale through aligned strategy, operational excellence, and intelligent execution.",
+    copy: "Transformation succeeds when strategy, systems, people, and execution reinforce one another. AZVA designs operating models built for coherence and scale.",
   },
   {
     title: "Operational Intelligence",
-    copy: "Building decision systems that combine data, automation, AI, and human judgment to improve performance.",
+    copy: "We help organizations make better decisions by connecting data, automation, AI, and human judgment into practical operating systems.",
   },
   {
     title: "Venture Partnerships",
-    copy: "Working selectively alongside founders where long-term alignment creates greater value than traditional consulting.",
+    copy: "For selected founders, AZVA works beyond advisory, supporting strategy, partnerships, investment readiness, and long-term value creation.",
   },
   {
     title: "Proprietary Intelligence",
-    copy: "Developing frameworks and platforms that transform complexity into measurable insight.",
+    copy: "AZVA develops frameworks and platforms that turn complex operational questions into measurable insight, beginning with PRIZM.",
   },
 ];
 
@@ -33,21 +34,32 @@ const principles = [
   ["Build for resilience.", "Organizations should become stronger through change, not dependent on it."],
 ];
 
+const prizmScores = [
+  ["AFI", "Automation Feasibility Index"],
+  ["AVI", "Automation Value Index"],
+  ["ARI", "Automation Realization Index"],
+  ["ACI", "Automation Confidence Index"],
+];
+
 export default function Home() {
   return (
     <main>
       <Navbar />
 
-      <section className="min-h-screen pt-40">
-        <div className="container-azva grid items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]">
+      <section className="min-h-screen pt-36 md:pt-44">
+        <div className="container-azva grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
             <p className="eyebrow mb-8">AZVA</p>
+
             <h1 className="display-xl max-w-5xl">
-              Purpose Aligned.
+              Purpose
+              <br />
+              Aligned.
               <br />
               <span className="font-[var(--font-fraunces)] italic text-[var(--azva-accent)]">
                 Value
-              </span>{" "}
+              </span>
+              <br />
               Delivered.
             </h1>
 
@@ -57,34 +69,35 @@ export default function Home() {
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <a href="#contact" className="btn-primary">
-                Start the Conversation <ArrowRight className="ml-2 h-4 w-4" />
-              </a>
-              <a href="#perspective" className="btn-secondary">
+              <ButtonLink href="#contact">Start the Conversation</ButtonLink>
+              <ButtonLink href="#thinking" variant="secondary">
                 Explore Our Thinking
-              </a>
+              </ButtonLink>
             </div>
           </div>
 
           <div className="card-azva relative hidden min-h-[560px] overflow-hidden lg:block">
-            <div className="absolute inset-8 rounded-[32px] border border-[var(--azva-border)]" />
-            <div className="absolute left-12 top-16 h-40 w-40 rounded-full border border-[var(--azva-accent)]/40" />
-            <div className="absolute bottom-20 right-16 h-64 w-64 rounded-full bg-[var(--azva-primary)]/10 blur-3xl" />
+            <div className="absolute inset-10 rounded-[32px] border border-[var(--azva-border)]" />
+            <div className="absolute left-12 top-16 h-44 w-44 rounded-full border border-[var(--azva-accent)]/35" />
+            <div className="absolute bottom-20 right-16 h-72 w-72 rounded-full bg-[var(--azva-primary)]/10 blur-3xl" />
+
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="grid h-72 w-72 rotate-45 grid-cols-2 gap-4">
-                <div className="rounded-3xl bg-[var(--azva-primary)]" />
-                <div className="rounded-3xl border border-[var(--azva-accent)]" />
-                <div className="rounded-3xl border border-[var(--azva-moss)]" />
-                <div className="rounded-3xl bg-[var(--azva-accent)]/75" />
+              <div className="relative h-[340px] w-[340px]">
+                <div className="absolute left-1/2 top-1/2 h-28 w-28 -translate-x-1/2 -translate-y-1/2 rounded-[28px] bg-[var(--azva-primary)]" />
+                <div className="absolute left-4 top-8 h-24 w-24 rounded-[24px] border border-[var(--azva-moss)]" />
+                <div className="absolute right-5 top-20 h-24 w-24 rounded-[24px] border border-[var(--azva-accent)]" />
+                <div className="absolute bottom-6 left-1/2 h-28 w-28 -translate-x-1/2 rounded-[28px] bg-[var(--azva-accent)]/72" />
+                <div className="absolute left-12 top-1/2 h-px w-64 bg-[var(--azva-border)]" />
+                <div className="absolute left-1/2 top-12 h-64 w-px bg-[var(--azva-border)]" />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="perspective" className="section-azva border-t border-[var(--azva-border)]">
+      <section id="approach" className="section-azva border-t border-[var(--azva-border)]">
         <div className="container-azva grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-          <p className="eyebrow">The AZVA Perspective</p>
+          <p className="eyebrow">Approach</p>
           <div>
             <h2 className="heading-xl">Where purpose meets performance.</h2>
             <div className="mt-8 space-y-6 body-lg">
@@ -103,27 +116,33 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="capabilities" className="section-azva">
+      <section id="capabilities" className="section-azva border-t border-[var(--azva-border)]">
         <div className="container-azva">
           <div className="max-w-3xl">
             <p className="eyebrow mb-6">Capabilities</p>
             <h2 className="heading-xl">How AZVA creates value.</h2>
           </div>
 
-          <div className="mt-16 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {capabilities.map((item) => (
-              <div key={item.title} className="card-azva p-8">
-                <h3 className="text-2xl font-medium tracking-[-0.04em] text-[var(--azva-primary)]">
+          <div className="mt-20 divide-y divide-[var(--azva-border)] border-y border-[var(--azva-border)]">
+            {capabilities.map((item, index) => (
+              <div
+                key={item.title}
+                className="grid gap-6 py-10 md:grid-cols-[0.15fr_0.35fr_0.5fr] md:items-start"
+              >
+                <div className="text-sm text-[var(--azva-accent)]">
+                  {String(index + 1).padStart(2, "0")}
+                </div>
+                <h3 className="text-3xl font-medium tracking-[-0.05em] text-[var(--azva-primary)]">
                   {item.title}
                 </h3>
-                <p className="body-md mt-5">{item.copy}</p>
+                <p className="body-md max-w-2xl">{item.copy}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="approach" className="section-azva dark-section">
+      <section id="thinking" className="section-azva dark-section">
         <div className="container-azva">
           <p className="eyebrow mb-6 text-[var(--azva-accent)]">How We Think</p>
           <h2 className="heading-xl max-w-4xl text-[var(--azva-canvas)]">
@@ -169,14 +188,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="prizm" className="section-azva border-y border-[var(--azva-border)]">
+      <section id="prizm" className="section-azva bg-[var(--azva-primary)] text-[var(--azva-canvas)]">
         <div className="container-azva">
           <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
             <div>
-              <p className="eyebrow mb-6">PRIZM™</p>
-              <h2 className="heading-xl">Quantifying confidence in operational intelligence.</h2>
+              <p className="eyebrow mb-6 text-[var(--azva-accent)]">PRIZM™</p>
+              <h2 className="heading-xl text-[var(--azva-canvas)]">
+                Quantifying confidence in operational intelligence.
+              </h2>
             </div>
-            <div className="space-y-6 body-lg">
+            <div className="space-y-6 text-lg leading-8 text-white/72">
               <p>
                 PRIZM™ is AZVA&apos;s proprietary operational intelligence framework. It evaluates
                 automation readiness, transformation potential, and unrealized enterprise value
@@ -190,18 +211,54 @@ export default function Home() {
           </div>
 
           <div className="mt-14 grid gap-4 md:grid-cols-4">
-            {["AFI", "AVI", "ARI", "ACI"].map((score) => (
-              <div key={score} className="card-azva p-6">
-                <div className="text-4xl font-semibold tracking-[-0.06em] text-[var(--azva-primary)]">
+            {prizmScores.map(([score, label]) => (
+              <div
+                key={score}
+                className="rounded-[28px] border border-white/12 bg-white/[0.04] p-6"
+              >
+                <div className="text-5xl font-semibold tracking-[-0.07em] text-[var(--azva-canvas)]">
                   {score}
                 </div>
+                <p className="mt-4 text-sm leading-6 text-white/58">{label}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="contact" className="section-azva">
+      <section id="about" className="section-azva">
+        <div className="container-azva grid gap-12 lg:grid-cols-[0.7fr_1.3fr]">
+          <div>
+            <Image
+              src="/brand/maz-headshot.jpeg"
+              alt="Mazhar Khan"
+              width={420}
+              height={560}
+              className="aspect-[4/5] w-full object-cover"
+            />
+          </div>
+          <div>
+            <p className="eyebrow mb-6">Founder</p>
+            <h2 className="heading-xl">Built from experience. Driven by purpose.</h2>
+            <div className="mt-8 space-y-6 body-lg">
+              <p>
+                AZVA is the culmination of decades spent leading enterprise transformation, AI
+                initiatives, operational reinvention, and strategic growth across startups, global
+                organizations, and founder-led businesses.
+              </p>
+              <p>
+                It was built on a simple belief: the greatest competitive advantage is alignment.
+              </p>
+              <p>
+                When purpose, people, systems, and execution move together, sustainable value
+                follows.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="section-azva border-t border-[var(--azva-border)]">
         <div className="container-azva grid items-end gap-12 lg:grid-cols-[1fr_0.9fr]">
           <div>
             <p className="eyebrow mb-6">Contact</p>
@@ -213,9 +270,9 @@ export default function Home() {
             </p>
           </div>
 
-          <a href="mailto:hello@azva.us" className="btn-primary w-fit">
-            Start the Conversation <ArrowRight className="ml-2 h-4 w-4" />
-          </a>
+          <ButtonLink href="mailto:hello@azva.us" className="w-fit">
+            Start the Conversation
+          </ButtonLink>
         </div>
       </section>
 
