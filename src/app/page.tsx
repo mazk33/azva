@@ -48,7 +48,7 @@ export default function Home() {
     <main>
       <Navbar />
 
-      <section className="min-h-[92vh] pt-32 md:min-h-screen md:pt-44">
+      <section className="min-h-[92vh] pt-40 md:min-h-screen md:pt-48">
         <div className="container-azva grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
           <FadeIn>
             <div>
@@ -66,7 +66,7 @@ export default function Home() {
                 Delivered.
               </h1>
 
-              <p className="body-lg mt-10 max-w-2xl">
+              <p className="body-lg mt-10 max-w-[540px]">
                 AZVA partners with founders, executives, investors, and enterprises to
                 align strategy, operations, technology, and capital into enduring value.
               </p>
@@ -275,6 +275,33 @@ export default function Home() {
           </div>
         </section>
       </FadeIn>
+
+      <Reveal>
+      <section id="perspectives" className="section-azva azva-chapter">
+        <div className="container-azva grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+          <div>
+            <p className="eyebrow mb-6">Perspectives</p>
+            <h2 className="heading-xl">Ideas that sharpen judgment.</h2>
+          </div>
+
+          <div className="border-y border-[var(--azva-border)] py-10">
+            <p className="text-sm text-[var(--azva-accent)]">Operating Note</p>
+
+            <h3 className="mt-5 max-w-3xl text-4xl font-medium tracking-[-0.055em] text-[var(--azva-primary)] md:text-5xl">
+              Operational leverage is not found. It is designed.
+            </h3>
+
+            <p className="body-md mt-6 max-w-2xl">
+              A short perspective on why enterprise transformation depends less on ambition and more on alignment between strategy, systems, and execution.
+            </p>
+
+            <a href="/perspectives" className="azva-institutional-link mt-8">
+              Read the note →
+            </a>
+          </div>
+        </div>
+      </section>
+      </Reveal>
 
       <SectionClosing>
         Better organizations begin with better alignment.

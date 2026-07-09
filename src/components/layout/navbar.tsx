@@ -11,7 +11,7 @@ const navItems = [
   { label: "Disciplines", href: "#disciplines" },
   { label: "Ventures", href: "#ventures" },
   { label: "PRIZM", href: "#prizm" },
-  { label: "Thinking", href: "#thinking" },
+  { label: "Perspectives", href: "#perspectives" },
 ];
 
 export function Navbar() {
@@ -19,7 +19,7 @@ export function Navbar() {
 
   return (
     <header className="fixed left-0 top-0 z-50 w-full border-b border-[var(--azva-border)] bg-[var(--azva-canvas)]/85 backdrop-blur-xl">
-      <div className="container-azva flex h-20 items-center justify-between">
+      <div className="container-azva flex h-24 items-center justify-between">
         <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
           <Image
             src="/brand/azva-logo.png"
@@ -31,7 +31,7 @@ export function Navbar() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-10 lg:flex">
+        <nav className="hidden items-center gap-14 lg:flex">
           {navItems.map((item) => (
             <Link
               key={item.label}

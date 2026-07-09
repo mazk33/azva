@@ -281,3 +281,10 @@ body {
     width: 100%;
   }
 }
+
+@media (max-width: 480px) {
+  .btn-primary,
+  .btn-secondary {
+    min-height: 52px;
+  }
+}
