@@ -77,8 +77,8 @@ export default function Home() {
               <div className="mt-10 flex flex-wrap gap-4">
                 <ButtonLink href="#contact">Start the Conversation</ButtonLink>
                 <ButtonLink href="#perspectives" variant="secondary">
-  Explore Perspectives
-</ButtonLink>
+                  Explore Perspectives
+                </ButtonLink>
               </div>
             </div>
           </FadeIn>
@@ -89,39 +89,40 @@ export default function Home() {
         </div>
       </section>
       <FadeIn>
-  <section id="approach" className="section-azva azva-chapter border-t border-[var(--azva-border)]">
-    <div className="container-azva grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-      <div>
-        <p className="eyebrow mb-6">Approach</p>
-      </div>
+        <section id="approach" className="section-azva azva-chapter border-t border-[var(--azva-border)]">
+          <div className="container-azva grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+            <div>
+              <p className="eyebrow mb-6">Approach</p>
+            </div>
 
-      <div>
-        <h2 className="heading-xl">Where purpose meets performance.</h2>
+            <div>
+              <h2 className="heading-xl">Where purpose meets performance.</h2>
 
-        <div className="mt-8 space-y-6 body-lg">
-          <p>Organizations rarely fail because of a lack of ambition.</p>
-          <p>
-            They drift when vision, operations, technology, and leadership evolve in different
-            directions.
-          </p>
-          <p>AZVA exists to restore alignment.</p>
-          <p>
-            We help organizations think more clearly, decide more confidently, and execute with
-            discipline.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-</FadeIn>
+              <div className="mt-8 space-y-6 body-lg">
+                <p>Organizations rarely fail because of a lack of ambition.</p>
+                <p>
+                  They drift when vision, operations, technology, and leadership evolve in different
+                  directions.
+                </p>
+                <p>AZVA exists to restore alignment.</p>
+                <p>
+                  We help organizations think more clearly, decide more confidently, and execute with
+                  discipline.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </FadeIn>
 
       <FadeIn>
         <section id="disciplines" className="section-azva azva-chapter border-t border-[var(--azva-border)]">
           <div className="container-azva">
             <SectionHeader
-  label="Disciplines"
-  title="The disciplines behind enduring value."
-/>
+              label="Disciplines"
+              title="The disciplines behind enduring value."
+              index="02"
+            />
             <div className="mt-20 divide-y divide-[var(--azva-border)] border-y border-[var(--azva-border)]">
               {capabilities.map((item, index) => (
                 <Lift
@@ -196,12 +197,13 @@ export default function Home() {
         <section id="prizm" className="section-azva azva-chapter bg-[var(--azva-primary)] text-[var(--azva-canvas)]">
           <div className="container-azva">
             <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-              <div>
-                <p className="eyebrow mb-6 text-[var(--azva-accent)]">PRIZM™</p>
-                <h2 className="heading-xl text-[var(--azva-canvas)]">
-                  Quantifying confidence in operational intelligence.
-                </h2>
-              </div>
+              <SectionHeader
+                label="PRIZM™"
+                title="Quantifying confidence in operational intelligence."
+                align="split"
+                theme="dark"
+                index="05"
+              />
               <div className="space-y-6 text-lg leading-8 text-white/72">
                 <p>
                   PRIZM™ is AZVA&apos;s proprietary operational intelligence framework. It evaluates
@@ -214,7 +216,6 @@ export default function Home() {
                 </p>
               </div>
             </div>
-
             <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {prizmScores.map(([score, label]) => (
                 <MetricCard key={score} metric={score} label={label} dark />
@@ -264,6 +265,7 @@ export default function Home() {
             <SectionHeader
               label="Perspectives"
               title="Ideas that sharpen judgment."
+              index="06"
             />
 
             <div>
