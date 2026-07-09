@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/footer";
 import { ButtonLink } from "@/components/ui/button";
 import { SectionClosing } from "@/components/ui/section-closing";
 import { FadeIn, Reveal, Lift } from "@/components/ui/fade-in";
+import { AlignmentGeometry } from "@/components/ui/alignment-geometry";
 
 const capabilities = [
   {
@@ -81,22 +82,7 @@ export default function Home() {
           </FadeIn>
 
           <Reveal delay={0.12}>
-            <div className="card-azva relative hidden min-h-[560px] overflow-hidden lg:block">
-              <div className="absolute inset-10 rounded-[32px] border border-[var(--azva-border)]" />
-              <div className="absolute left-12 top-16 h-44 w-44 rounded-full border border-[var(--azva-accent)]/35" />
-              <div className="absolute bottom-20 right-16 h-72 w-72 rounded-full bg-[var(--azva-primary)]/10 blur-3xl" />
-
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="relative h-[340px] w-[340px]">
-                  <div className="absolute left-1/2 top-1/2 h-28 w-28 -translate-x-1/2 -translate-y-1/2 rounded-[28px] bg-[var(--azva-primary)]" />
-                  <div className="absolute left-4 top-8 h-24 w-24 rounded-[24px] border border-[var(--azva-moss)]" />
-                  <div className="absolute right-5 top-20 h-24 w-24 rounded-[24px] border border-[var(--azva-accent)]" />
-                  <div className="absolute bottom-6 left-1/2 h-28 w-28 -translate-x-1/2 rounded-[28px] bg-[var(--azva-accent)]/72" />
-                  <div className="absolute left-12 top-1/2 h-px w-64 bg-[var(--azva-border)]" />
-                  <div className="absolute left-1/2 top-12 h-64 w-px bg-[var(--azva-border)]" />
-                </div>
-              </div>
-            </div>
+            <AlignmentGeometry />
           </Reveal>
         </div>
       </section>
@@ -277,30 +263,30 @@ export default function Home() {
       </FadeIn>
 
       <Reveal>
-      <section id="perspectives" className="section-azva azva-chapter">
-        <div className="container-azva grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-          <div>
-            <p className="eyebrow mb-6">Perspectives</p>
-            <h2 className="heading-xl">Ideas that sharpen judgment.</h2>
+        <section id="perspectives" className="section-azva azva-chapter">
+          <div className="container-azva grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+            <div>
+              <p className="eyebrow mb-6">Perspectives</p>
+              <h2 className="heading-xl">Ideas that sharpen judgment.</h2>
+            </div>
+
+            <div className="border-y border-[var(--azva-border)] py-10">
+              <p className="text-sm text-[var(--azva-accent)]">Operating Note</p>
+
+              <h3 className="mt-5 max-w-3xl text-4xl font-medium tracking-[-0.055em] text-[var(--azva-primary)] md:text-5xl">
+                Operational leverage is not found. It is designed.
+              </h3>
+
+              <p className="body-md mt-6 max-w-2xl">
+                A short perspective on why enterprise transformation depends less on ambition and more on alignment between strategy, systems, and execution.
+              </p>
+
+              <a href="/perspectives" className="azva-institutional-link mt-8">
+                Read the note →
+              </a>
+            </div>
           </div>
-
-          <div className="border-y border-[var(--azva-border)] py-10">
-            <p className="text-sm text-[var(--azva-accent)]">Operating Note</p>
-
-            <h3 className="mt-5 max-w-3xl text-4xl font-medium tracking-[-0.055em] text-[var(--azva-primary)] md:text-5xl">
-              Operational leverage is not found. It is designed.
-            </h3>
-
-            <p className="body-md mt-6 max-w-2xl">
-              A short perspective on why enterprise transformation depends less on ambition and more on alignment between strategy, systems, and execution.
-            </p>
-
-            <a href="/perspectives" className="azva-institutional-link mt-8">
-              Read the note →
-            </a>
-          </div>
-        </div>
-      </section>
+        </section>
       </Reveal>
 
       <SectionClosing>
