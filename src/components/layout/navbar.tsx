@@ -45,7 +45,7 @@ export function Navbar() {
         </nav>
 
         <div className="hidden lg:block">
-          <ButtonLink href="#contact" variant="text" className="px-0">
+          <ButtonLink href="/connect" variant="text" className="px-0">
             Start the Conversation
           </ButtonLink>
         </div>
@@ -81,7 +81,7 @@ export function Navbar() {
                 Better organizations begin with better alignment.
               </p>
               <Link
-                href="#contact"
+                href="/connect"
                 onClick={() => setOpen(false)}
                 className="btn-primary"
               >
