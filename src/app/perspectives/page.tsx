@@ -5,6 +5,12 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { EditorialCard } from "@/components/ui/editorial-card";
 import { SectionClosing } from "@/components/ui/section-closing";
 
+export const metadata = {
+  title: "Perspectives | AZVA",
+  description:
+    "Essays, operating notes, and frameworks from AZVA on strategy, transformation, operational intelligence, venture building, and aligned execution.",
+};
+
 const perspectives = [
   {
     eyebrow: "Operating Note",

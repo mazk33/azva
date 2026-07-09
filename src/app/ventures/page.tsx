@@ -4,6 +4,12 @@ import { Footer } from "@/components/layout/footer";
 import { SectionHeader } from "@/components/ui/section-header";
 import { SectionClosing } from "@/components/ui/section-closing";
 
+export const metadata = {
+  title: "Ventures | AZVA",
+  description:
+    "AZVA selectively partners with founders and leadership teams where values, ambition, and execution are deeply aligned.",
+};
+
 const partnershipModes = [
   {
     title: "Strategic Advisory",

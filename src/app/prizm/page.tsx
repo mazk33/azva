@@ -6,6 +6,12 @@ import { MetricCard } from "@/components/ui/metric-card";
 import { SectionClosing } from "@/components/ui/section-closing";
 import { ButtonLink } from "@/components/ui/button";
 
+export const metadata = {
+  title: "PRIZM | AZVA",
+  description:
+    "PRIZM is AZVA’s proprietary operational intelligence framework for evaluating automation readiness, transformation potential, and unrealized enterprise value.",
+};
+
 const indices = [
   {
     metric: "AFI",

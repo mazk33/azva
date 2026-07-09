@@ -5,6 +5,12 @@ import { Footer } from "@/components/layout/footer";
 import { SectionHeader } from "@/components/ui/section-header";
 import { SectionClosing } from "@/components/ui/section-closing";
 
+export const metadata = {
+  title: "About | AZVA",
+  description:
+    "AZVA exists to help leaders navigate complexity with clarity, alignment, and disciplined judgment.",
+};
+
 const experience = [
   "Enterprise transformation",
   "AI, automation, and operational intelligence",

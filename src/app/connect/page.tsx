@@ -4,6 +4,12 @@ import { Footer } from "@/components/layout/footer";
 import { SectionHeader } from "@/components/ui/section-header";
 import { SectionClosing } from "@/components/ui/section-closing";
 
+export const metadata = {
+  title: "Connect | AZVA",
+  description:
+    "Start a conversation with AZVA about strategy, transformation, operational intelligence, venture partnerships, or PRIZM.",
+};
+
 const paths = [
   "Strategic advisory",
   "Enterprise transformation",
