@@ -4,7 +4,7 @@ import { ButtonLink } from "@/components/ui/button";
 
 const navItems = [
   { label: "Approach", href: "#approach" },
-  { label: "Capabilities", href: "#capabilities" },
+  { label: "Disciplines", href: "#disciplines" },
   { label: "Ventures", href: "#ventures" },
   { label: "PRIZM", href: "#prizm" },
   { label: "Thinking", href: "#thinking" },

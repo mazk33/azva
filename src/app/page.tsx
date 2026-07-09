@@ -117,11 +117,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="capabilities" className="section-azva border-t border-[var(--azva-border)]">
+      <section id="disciplines" className="section-azva border-t border-[var(--azva-border)]">
         <div className="container-azva">
           <div className="max-w-3xl">
-            <p className="eyebrow mb-6">Capabilities</p>
-            <h2 className="heading-xl">How AZVA creates value.</h2>
+            <p className="eyebrow mb-6">Disciplines</p>
+            <h2 className="heading-xl">The disciplines behind enduring value.</h2>
           </div>
 
           <div className="mt-20 divide-y divide-[var(--azva-border)] border-y border-[var(--azva-border)]">
