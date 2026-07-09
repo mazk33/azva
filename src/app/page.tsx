@@ -1,4 +1,3 @@
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
@@ -6,6 +5,9 @@ import { ButtonLink } from "@/components/ui/button";
 import { SectionClosing } from "@/components/ui/section-closing";
 import { FadeIn, Reveal, Lift } from "@/components/ui/fade-in";
 import { AlignmentGrid } from "@/components/visuals";
+import { SectionHeader } from "@/components/ui/section-header";
+import { EditorialCard } from "@/components/ui/editorial-card";
+import { MetricCard } from "@/components/ui/metric-card";
 
 const capabilities = [
   {
@@ -74,9 +76,9 @@ export default function Home() {
 
               <div className="mt-10 flex flex-wrap gap-4">
                 <ButtonLink href="#contact">Start the Conversation</ButtonLink>
-                <ButtonLink href="#thinking" variant="secondary">
-                  Explore Our Thinking
-                </ButtonLink>
+                <ButtonLink href="#perspectives" variant="secondary">
+  Explore Perspectives
+</ButtonLink>
               </div>
             </div>
           </FadeIn>
@@ -86,38 +88,40 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
-
       <FadeIn>
-        <section id="approach" className="section-azva azva-chapter border-t border-[var(--azva-border)]">
-          <div className="container-azva grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-            <p className="eyebrow">Approach</p>
-            <div>
-              <h2 className="heading-xl">Where purpose meets performance.</h2>
-              <div className="mt-8 space-y-6 body-lg">
-                <p>Organizations rarely fail because of a lack of ambition.</p>
-                <p>
-                  They drift when vision, operations, technology, and leadership evolve in different
-                  directions.
-                </p>
-                <p>AZVA exists to restore alignment.</p>
-                <p>
-                  We help organizations think more clearly, decide more confidently, and execute with
-                  discipline.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </FadeIn>
+  <section id="approach" className="section-azva azva-chapter border-t border-[var(--azva-border)]">
+    <div className="container-azva grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+      <div>
+        <p className="eyebrow mb-6">Approach</p>
+      </div>
+
+      <div>
+        <h2 className="heading-xl">Where purpose meets performance.</h2>
+
+        <div className="mt-8 space-y-6 body-lg">
+          <p>Organizations rarely fail because of a lack of ambition.</p>
+          <p>
+            They drift when vision, operations, technology, and leadership evolve in different
+            directions.
+          </p>
+          <p>AZVA exists to restore alignment.</p>
+          <p>
+            We help organizations think more clearly, decide more confidently, and execute with
+            discipline.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</FadeIn>
 
       <FadeIn>
         <section id="disciplines" className="section-azva azva-chapter border-t border-[var(--azva-border)]">
           <div className="container-azva">
-            <div className="max-w-3xl">
-              <p className="eyebrow mb-6">Disciplines</p>
-              <h2 className="heading-xl">The disciplines behind enduring value.</h2>
-            </div>
-
+            <SectionHeader
+  label="Disciplines"
+  title="The disciplines behind enduring value."
+/>
             <div className="mt-20 divide-y divide-[var(--azva-border)] border-y border-[var(--azva-border)]">
               {capabilities.map((item, index) => (
                 <Lift
@@ -213,15 +217,7 @@ export default function Home() {
 
             <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {prizmScores.map(([score, label]) => (
-                <div
-                  key={score}
-                  className="rounded-[28px] border border-white/12 bg-white/[0.04] p-6"
-                >
-                  <div className="text-5xl font-semibold tracking-[-0.07em] text-[var(--azva-canvas)]">
-                    {score}
-                  </div>
-                  <p className="mt-4 text-sm leading-6 text-white/58">{label}</p>
-                </div>
+                <MetricCard key={score} metric={score} label={label} dark />
               ))}
             </div>
           </div>
@@ -265,21 +261,17 @@ export default function Home() {
       <Reveal>
         <section id="perspectives" className="section-azva azva-chapter">
           <div className="container-azva grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+            <SectionHeader
+              label="Perspectives"
+              title="Ideas that sharpen judgment."
+            />
+
             <div>
-              <p className="eyebrow mb-6">Perspectives</p>
-              <h2 className="heading-xl">Ideas that sharpen judgment.</h2>
-            </div>
-
-            <div className="border-y border-[var(--azva-border)] py-10">
-              <p className="text-sm text-[var(--azva-accent)]">Operating Note</p>
-
-              <h3 className="mt-5 max-w-3xl text-4xl font-medium tracking-[-0.055em] text-[var(--azva-primary)] md:text-5xl">
-                Operational leverage is not found. It is designed.
-              </h3>
-
-              <p className="body-md mt-6 max-w-2xl">
-                A short perspective on why enterprise transformation depends less on ambition and more on alignment between strategy, systems, and execution.
-              </p>
+              <EditorialCard
+                eyebrow="Operating Note"
+                title="Operational leverage is not found. It is designed."
+                copy="A short perspective on why enterprise transformation depends less on ambition and more on alignment between strategy, systems, and execution."
+              />
 
               <a href="/perspectives" className="azva-institutional-link mt-8">
                 Read the note →
