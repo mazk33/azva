@@ -8,6 +8,7 @@ const links = [
   ["PRIZM", "#prizm"],
   ["Thinking", "#thinking"],
   ["Contact", "#contact"],
+  ["Manifesto", "/manifesto"],
 ];
 
 export function Footer() {
