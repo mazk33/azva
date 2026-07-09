@@ -10,8 +10,8 @@ const navItems = [
   { label: "Approach", href: "#approach" },
   { label: "Disciplines", href: "#disciplines" },
   { label: "Ventures", href: "#ventures" },
-  { label: "PRIZM", href: "#prizm" },
-  { label: "Perspectives", href: "#perspectives" },
+  { label: "PRIZM", href: "/prizm" },
+  { label: "Perspectives", href: "/perspectives" },
 ];
 
 export function Navbar() {
