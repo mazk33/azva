@@ -138,3 +138,36 @@ body {
     width: min(100% - 28px, 1120px);
   }
 }
+
+.azva-line {
+  height: 1px;
+  width: 100%;
+  background: var(--azva-border);
+}
+
+.azva-soft-grid {
+  background-image:
+    linear-gradient(rgba(30, 42, 56, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 42, 56, 0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.azva-hover-lift {
+  transition:
+    transform 260ms ease,
+    border-color 260ms ease,
+    background 260ms ease;
+}
+
+.azva-hover-lift:hover {
+  transform: translateY(-4px);
+  border-color: rgba(181, 110, 70, 0.45);
+}
+
+.azva-editorial-rule {
+  border-top: 1px solid var(--azva-border);
+}
+
+.azva-muted-text {
+  color: rgba(14, 14, 14, 0.62);
+}

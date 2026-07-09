@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { ButtonLink } from "@/components/ui/button";
+import { SectionClosing } from "@/components/ui/section-closing";
 
 const capabilities = [
   {
@@ -127,7 +128,7 @@ export default function Home() {
             {capabilities.map((item, index) => (
               <div
                 key={item.title}
-                className="grid gap-6 py-10 md:grid-cols-[0.15fr_0.35fr_0.5fr] md:items-start"
+                className="azva-hover-lift grid gap-6 py-10 md:grid-cols-[0.15fr_0.35fr_0.5fr] md:items-start"
               >
                 <div className="text-sm text-[var(--azva-accent)]">
                   {String(index + 1).padStart(2, "0")}
@@ -257,6 +258,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <SectionClosing>
+        Better organizations begin with better alignment.
+      </SectionClosing>
 
       <section id="contact" className="section-azva border-t border-[var(--azva-border)]">
         <div className="container-azva grid items-end gap-12 lg:grid-cols-[1fr_0.9fr]">
