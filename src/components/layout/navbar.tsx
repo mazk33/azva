@@ -35,8 +35,8 @@ export function Navbar() {
 
   return (
     <>
-      <header className="fixed left-0 top-0 z-[10000] w-full border-b border-[var(--azva-border)] bg-[var(--azva-canvas)]/95 backdrop-blur-xl">
-        <div className="container-azva flex h-24 items-center justify-between">
+      <header className="fixed left-0 top-0 z-[10000] w-full border-b border-black/8 bg-[var(--azva-canvas)]/95 backdrop-blur-xl">
+        <div className="container-azva flex h-[88px] items-center justify-between">
           <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
             <Image
               src="/brand/azva-logo.png"
@@ -44,17 +44,17 @@ export function Navbar() {
               width={168}
               height={52}
               priority
-              className="h-9 w-auto md:h-10"
+              className="h-[4.5rem] w-auto md:h-[4.75rem]"
             />
           </Link>
 
-          <nav className="hidden items-center gap-14 lg:flex">
+          <nav className="hidden items-center gap-12 lg:flex">
             {navItems.map((item) => (
               <Link
                 key={item.label}
                 href={item.href}
                 className={cn(
-                  "text-sm font-normal transition",
+                  "text-[15px] font-normal transition",
                   isActive(item.href)
                     ? "text-[var(--azva-primary)]"
                     : "text-[rgba(14,14,14,0.58)] hover:text-[var(--azva-accent)]"
@@ -85,7 +85,7 @@ export function Navbar() {
 
       {open && (
         <div className="fixed inset-0 z-[9999] overflow-y-auto bg-[var(--azva-canvas)] lg:hidden">
-          <div className="container-azva flex min-h-screen flex-col pt-32 pb-8">
+          <div className="container-azva flex min-h-screen flex-col pt-28 pb-8">
             <div className="mb-10">
               <p className="font-[var(--font-fraunces)] text-4xl italic leading-tight tracking-[-0.04em] text-[var(--azva-primary)]">
                 Purpose Aligned.

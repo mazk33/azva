@@ -57,12 +57,10 @@ export default function Home() {
     <main>
       <Navbar />
 
-      <section className="min-h-[92vh] pt-40 md:min-h-screen md:pt-48">
+      <section className="min-h-[88vh] pt-28 md:min-h-screen md:pt-36">
         <div className="container-azva grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
           <FadeIn>
             <div>
-              <p className="eyebrow mb-8">AZVA</p>
-
               <h1 className="display-xl max-w-5xl">
                 Purpose
                 <br />
@@ -75,12 +73,12 @@ export default function Home() {
                 Delivered.
               </h1>
 
-              <p className="body-lg mt-10 max-w-[540px]">
+              <p className="body-lg mt-14 max-w-[490px]">
                 AZVA partners with founders, executives, investors, and enterprises to
                 align strategy, operations, technology, and capital into enduring value.
               </p>
 
-              <div className="mt-10 flex flex-wrap gap-4">
+              <div className="mt-12 flex flex-wrap gap-5">
                 <ButtonLink href="#contact">Start the Conversation</ButtonLink>
                 <ButtonLink href="#perspectives" variant="secondary">
                   Explore Perspectives
@@ -89,7 +87,7 @@ export default function Home() {
             </div>
           </FadeIn>
 
-          <Reveal delay={0.12}>
+          <Reveal delay={0.12} className="lg:-translate-y-12">
             <AlignmentGrid />
           </Reveal>
         </div>
