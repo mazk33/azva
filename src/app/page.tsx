@@ -156,26 +156,11 @@ export default function Home() {
 
       <FadeIn>
         <section id="ventures" className="section-azva azva-chapter">
-          <div className="container-azva grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-            <div>
-              <p className="eyebrow mb-6">Ventures</p>
-              <h2 className="heading-xl">Some opportunities deserve more than advice.</h2>
-            </div>
-            <div className="space-y-6 body-lg">
-              <p>
-                AZVA selectively partners with founders and leadership teams where values, ambition,
-                and execution are deeply aligned.
-              </p>
-              <p>
-                These relationships may extend beyond advisory into strategic partnerships, advisory
-                equity, investment readiness, select investor introductions, and direct investment in
-                exceptional opportunities.
-              </p>
-              <p className="font-[var(--font-fraunces)] text-3xl italic leading-tight text-[var(--azva-primary)]">
-                We do not invest in ideas. We invest in conviction, capability, and alignment.
-              </p>
-            </div>
-          </div>
+          <SectionHeader
+            label="Ventures"
+            title="Some opportunities deserve more than advice."
+            index="04"
+          />
         </section>
       </FadeIn>
 
