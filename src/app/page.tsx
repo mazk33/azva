@@ -5,7 +5,7 @@ import { Footer } from "@/components/layout/footer";
 import { ButtonLink } from "@/components/ui/button";
 import { SectionClosing } from "@/components/ui/section-closing";
 import { FadeIn, Reveal, Lift } from "@/components/ui/fade-in";
-import { AlignmentGeometry } from "@/components/ui/alignment-geometry";
+import { AlignmentGrid } from "@/components/visuals";
 
 const capabilities = [
   {
@@ -82,7 +82,7 @@ export default function Home() {
           </FadeIn>
 
           <Reveal delay={0.12}>
-            <AlignmentGeometry />
+            <AlignmentGrid />
           </Reveal>
         </div>
       </section>
