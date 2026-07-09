@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { Navbar } from "@/components/layout/navbar";
+import { Footer } from "@/components/layout/footer";
 
 const capabilities = [
   {
@@ -218,20 +219,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="border-t border-[var(--azva-border)] py-10">
-        <div className="container-azva flex flex-col justify-between gap-6 md:flex-row md:items-center">
-          <Image
-            src="/brand/azva-logo.png"
-            alt="AZVA"
-            width={140}
-            height={44}
-            className="h-8 w-auto"
-          />
-          <p className="text-sm text-[rgba(14,14,14,0.58)]">
-            Purpose Aligned. Value Delivered.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }
