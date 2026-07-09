@@ -90,27 +90,13 @@ export default function Home() {
       </section>
       <FadeIn>
         <section id="approach" className="section-azva azva-chapter border-t border-[var(--azva-border)]">
-          <div className="container-azva grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-            <div>
-              <p className="eyebrow mb-6">Approach</p>
-            </div>
-
-            <div>
-              <h2 className="heading-xl">Where purpose meets performance.</h2>
-
-              <div className="mt-8 space-y-6 body-lg">
-                <p>Organizations rarely fail because of a lack of ambition.</p>
-                <p>
-                  They drift when vision, operations, technology, and leadership evolve in different
-                  directions.
-                </p>
-                <p>AZVA exists to restore alignment.</p>
-                <p>
-                  We help organizations think more clearly, decide more confidently, and execute with
-                  discipline.
-                </p>
-              </div>
-            </div>
+          <div className="container-azva">
+            <SectionHeader
+              label="Approach"
+              title="Where purpose meets performance."
+              index="01"
+              copy="Organizations rarely fail because of a lack of ambition. They drift when vision, operations, technology, and leadership evolve in different directions. AZVA exists to restore alignment. We help organizations think more clearly, decide more confidently, and execute with discipline."
+            />
           </div>
         </section>
       </FadeIn>
