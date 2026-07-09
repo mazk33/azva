@@ -52,6 +52,15 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  icons: {
+    icon: "/brand/azva-logo.png",
+    apple: "/brand/azva-logo.png",
+  },
+  applicationName: "AZVA",
+};
+
+export const viewport = {
+  themeColor: "#1E2A38",
 };
 
 export default function RootLayout({
