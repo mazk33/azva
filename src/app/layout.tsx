@@ -13,9 +13,44 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "AZVA | Purpose Aligned. Value Delivered.",
+  metadataBase: new URL("https://azva.us"),
+  title: {
+    default: "AZVA | Purpose Aligned. Value Delivered.",
+    template: "%s | AZVA",
+  },
   description:
     "AZVA partners with founders, executives, investors, and enterprises to align strategy, operations, technology, and capital into enduring value.",
+  keywords: [
+    "strategy",
+    "enterprise transformation",
+    "operational intelligence",
+    "venture partnerships",
+    "PRIZM",
+    "automation readiness",
+    "strategic advisory",
+  ],
+  authors: [{ name: "AZVA" }],
+  creator: "AZVA",
+  publisher: "AZVA",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://azva.us",
+    siteName: "AZVA",
+    title: "AZVA | Purpose Aligned. Value Delivered.",
+    description:
+      "Strategic transformation, operational intelligence, venture partnerships, and PRIZM.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AZVA | Purpose Aligned. Value Delivered.",
+    description:
+      "Strategic transformation, operational intelligence, venture partnerships, and PRIZM.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
