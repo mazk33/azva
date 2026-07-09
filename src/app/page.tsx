@@ -4,10 +4,10 @@ import { Footer } from "@/components/layout/footer";
 import { ButtonLink } from "@/components/ui/button";
 import { SectionClosing } from "@/components/ui/section-closing";
 import { FadeIn, Reveal, Lift } from "@/components/ui/fade-in";
-import { AlignmentGrid } from "@/components/visuals";
 import { SectionHeader } from "@/components/ui/section-header";
 import { EditorialCard } from "@/components/ui/editorial-card";
 import { MetricCard } from "@/components/ui/metric-card";
+import { AlignmentGrid, SignalDivider } from "@/components/visuals";
 
 export const metadata = {
   title: "Perspectives | AZVA",
@@ -106,7 +106,7 @@ export default function Home() {
           </div>
         </section>
       </FadeIn>
-
+      <SignalDivider />
       <FadeIn>
         <section id="disciplines" className="section-azva azva-chapter border-t border-[var(--azva-border)]">
           <div className="container-azva">
@@ -190,7 +190,7 @@ export default function Home() {
           </div>
         </section>
       </Reveal>
-
+      <SignalDivider />
       <FadeIn>
         <section id="prizm" className="section-azva azva-chapter bg-[var(--azva-primary)] text-[var(--azva-canvas)]">
           <div className="container-azva">

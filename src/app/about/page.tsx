@@ -73,7 +73,7 @@ export default function AboutPage() {
         <div className="container-azva grid gap-14 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
           <div>
             <Image
-              src="/brand/maz-headshot.jpeg"
+              src="/brand/maz-headshot.png"
               alt="Mazhar Khan"
               width={520}
               height={650}

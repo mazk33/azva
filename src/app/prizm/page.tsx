@@ -70,6 +70,19 @@ export default function PrizmPage() {
         </div>
       </section>
 
+      <section className="bg-[var(--azva-primary)] pb-20 text-[var(--azva-canvas)]">
+        <div className="container-azva grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {indices.map((item) => (
+            <MetricCard
+              key={item.metric}
+              metric={item.metric}
+              label={item.label}
+              dark
+            />
+          ))}
+        </div>
+      </section>
+
       <section className="section-azva azva-chapter">
         <div className="container-azva grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
           <SectionHeader
