@@ -4,7 +4,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { SectionHeader } from "@/components/ui/section-header";
 import { SectionClosing } from "@/components/ui/section-closing";
-import { SystemsFlow } from "@/components/visuals";
+import { OperatingConvergence } from "@/components/visuals";
 
 export const metadata = {
   title: "About | AZVA",
@@ -76,18 +76,18 @@ export default function AboutPage() {
           <div>
             <SectionHeader
               label="Operating Logic"
-              title="Experience becomes valuable when it sharpens judgment."
+              title="Enduring value emerges through operating convergence."
               index="02"
             />
 
             <p className="body-lg mt-8 max-w-2xl">
-              AZVA brings together operating experience, strategic judgment, systems thinking,
-              and disciplined execution to create value that can endure beyond a single decision
-              or engagement.
+              AZVA brings operating experience, strategic judgment, organizational
+              alignment, and disciplined execution into one coherent operating model
+              designed to create enduring value.
             </p>
           </div>
 
-          <SystemsFlow />
+          <OperatingConvergence />
         </div>
       </section>
 
