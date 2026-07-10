@@ -4,6 +4,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { SectionHeader } from "@/components/ui/section-header";
 import { SectionClosing } from "@/components/ui/section-closing";
+import { SystemsFlow } from "@/components/visuals";
 
 export const metadata = {
   title: "About | AZVA",
@@ -33,9 +34,10 @@ export default function AboutPage() {
             Built from experience. Driven by purpose.
           </h1>
 
-          <p className="body-lg mt-10 max-w-[680px]">
-            AZVA exists to help leaders navigate complexity with clarity,
-            alignment, and disciplined judgment.
+          <p className="body-lg mt-8 max-w-2xl">
+            AZVA turns operating experience into judgment, judgment into alignment,
+            and alignment into enduring value through disciplined strategy, systems
+            thinking, and execution.
           </p>
         </div>
       </section>
@@ -70,6 +72,26 @@ export default function AboutPage() {
       </section>
 
       <section className="section-azva azva-chapter">
+        <div className="container-azva grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr]">
+          <div>
+            <SectionHeader
+              label="Operating Logic"
+              title="Experience becomes valuable when it sharpens judgment."
+              index="02"
+            />
+
+            <p className="body-lg mt-8 max-w-2xl">
+              AZVA brings together operating experience, strategic judgment, systems thinking,
+              and disciplined execution to create value that can endure beyond a single decision
+              or engagement.
+            </p>
+          </div>
+
+          <SystemsFlow />
+        </div>
+      </section>
+
+      <section className="section-azva azva-chapter">
         <div className="container-azva grid gap-14 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
           <div>
             <Image
@@ -86,7 +108,7 @@ export default function AboutPage() {
             <SectionHeader
               label="Founder"
               title="Mazhar Khan"
-              index="02"
+              index="03"
             />
 
             <div className="mt-8 space-y-6 body-lg">
@@ -133,7 +155,7 @@ export default function AboutPage() {
             <SectionHeader
               label="Connect"
               title="Start with clarity."
-              index="03"
+              index="04"
             />
 
             <p className="body-lg mt-8 max-w-2xl">

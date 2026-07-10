@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { GeometryFrame } from "./GeometryFrame";
+import { AzvaCoreMark } from "./AzvaCoreMark";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -11,18 +12,18 @@ export function AlignmentGrid() {
   const lineMotion = reduceMotion
     ? {}
     : {
-        initial: { pathLength: 0, opacity: 0 },
-        animate: { pathLength: 1, opacity: 1 },
-        transition: { duration: 1.4, ease },
-      };
+      initial: { pathLength: 0, opacity: 0 },
+      animate: { pathLength: 1, opacity: 1 },
+      transition: { duration: 1.4, ease },
+    };
 
   const nodeMotion = reduceMotion
     ? {}
     : {
-        initial: { scale: 0.94, opacity: 0 },
-        animate: { scale: 1, opacity: 1 },
-        transition: { duration: 0.7, ease, delay: 0.35 },
-      };
+      initial: { scale: 0.94, opacity: 0 },
+      animate: { scale: 1, opacity: 1 },
+      transition: { duration: 0.7, ease, delay: 0.35 },
+    };
 
   return (
     <GeometryFrame>
@@ -104,16 +105,11 @@ export function AlignmentGrid() {
           {...lineMotion}
         />
 
-        <motion.rect
-          x="206"
-          y="206"
-          width="108"
-          height="108"
-          rx="26"
-          fill="var(--azva-primary)"
-          filter="url(#softGlow)"
-          {...nodeMotion}
-        />
+        <g transform="translate(206 206)">
+          <foreignObject width="108" height="108">
+            <AzvaCoreMark className="h-[108px] w-[108px]" />
+          </foreignObject>
+        </g>
 
         {[
           { cx: 140, cy: 150, fill: "var(--azva-accent)" },
