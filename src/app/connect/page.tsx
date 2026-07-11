@@ -1,9 +1,9 @@
-import Link from "next/link";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { SectionHeader } from "@/components/ui/section-header";
 import { SectionClosing } from "@/components/ui/section-closing";
 import { ConversationSignal } from "@/components/visuals";
+import { ConversationForm } from "@/components/forms/conversation-form";
 
 export const metadata = {
   title: "Connect | AZVA",
@@ -28,43 +28,36 @@ export default function ConnectPage() {
       <section className="pb-24 pt-[calc(88px+3rem)] sm:pb-28 sm:pt-[calc(88px+4rem)] lg:pb-32 lg:pt-[calc(88px+5rem)]">
         <div className="container-azva">
           <p className="eyebrow mb-8">Connect</p>
-
-          <h1 className="display-lg max-w-5xl">
-            Start with clarity.
-          </h1>
-
-          <p className="body-lg mt-10 max-w-[680px]">
-            Whether you are building, transforming, investing, or deciding
-            through complexity, the first conversation begins with alignment.
+          <h1 className="display-lg max-w-5xl">Start with clarity.</h1>
+          <p className="body-lg mt-10 max-w-[720px]">
+            Every engagement begins with understanding the context before
+            proposing a solution. Share the decision, challenge, or opportunity
+            you are navigating.
           </p>
         </div>
       </section>
 
       <section className="section-azva azva-chapter">
-        <div className="container-azva grid items-start gap-14 xl:grid-cols-[0.95fr_1.05fr]">
+        <div className="container-azva grid items-start gap-14 xl:grid-cols-[0.82fr_1.18fr] xl:gap-16">
           <div>
             <SectionHeader
-              label="Inquiry"
+              label="Conversation Request"
               title="Tell us what you are trying to clarify."
               index="01"
             />
 
-            <div className="mt-8 space-y-8">
-              <p className="body-lg max-w-2xl">
-                AZVA works with a limited number of aligned leaders, companies,
-                investors, and ventures. Share the context, the decision, or the
-                opportunity you are navigating.
-              </p>
+            <p className="body-lg mt-8 max-w-2xl">
+              AZVA works with a limited number of aligned founders, executive
+              teams, investors, and organizations. A little context helps us
+              determine whether and how the conversation may be useful.
+            </p>
 
-              <Link href="mailto:hello@azva.us" className="btn-primary w-fit">
-                hello@azva.us
-              </Link>
+            <div className="mx-auto mt-10 w-full max-w-[460px] xl:mx-0">
+              <ConversationSignal />
             </div>
           </div>
 
-          <div className="mx-auto w-full max-w-[560px] xl:mt-[4.2rem] xl:justify-self-end">
-            <ConversationSignal />
-          </div>
+          <ConversationForm />
         </div>
       </section>
 

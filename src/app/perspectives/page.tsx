@@ -72,7 +72,7 @@ export default function PerspectivesPage() {
               copy={perspectives[0].copy}
             />
 
-            <Link href="#" className="azva-institutional-link mt-8">
+            <Link href="/perspectives/operational-leverage-is-designed" className="azva-institutional-link mt-8">
               Read the note →
             </Link>
           </div>

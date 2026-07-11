@@ -315,3 +315,37 @@ body {
     width: min(100% - 24px, 1120px);
   }
 }
+
+.azva-input {
+  width: 100%;
+  border: 1px solid var(--azva-border);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.42);
+  padding: 0.9rem 1rem;
+  color: var(--azva-primary);
+  outline: none;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+}
+
+.azva-input::placeholder {
+  color: rgba(14, 14, 14, 0.38);
+}
+
+.azva-input:hover {
+  border-color: rgba(181, 110, 70, 0.42);
+}
+
+.azva-input:focus {
+  border-color: var(--azva-accent);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 0 0 3px rgba(181, 110, 70, 0.12);
+}
+
+.azva-input:disabled,
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.62;
+}
