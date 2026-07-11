@@ -108,7 +108,7 @@ export default function AboutPage() {
         w-full
         rounded-[24px]
         object-cover
-        object-[50%_24%]
+        object-[50%_20%]
         brightness-[1.04]
         contrast-[0.94]
         saturate-[0.96]
