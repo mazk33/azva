@@ -8,3 +8,4 @@ export {
   AzvaMarkMonogram,
 } from "./AzvaMarkVariants";
 export { OperatingConvergence } from "./OperatingConvergence";
+export { ConfidenceMatrix } from "./ConfidenceMatrix";

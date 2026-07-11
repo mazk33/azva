@@ -5,6 +5,7 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { MetricCard } from "@/components/ui/metric-card";
 import { SectionClosing } from "@/components/ui/section-closing";
 import { ButtonLink } from "@/components/ui/button";
+import { ConfidenceMatrix } from "@/components/visuals";
 
 export const metadata = {
   title: "PRIZM | AZVA",
@@ -49,37 +50,51 @@ export default function PrizmPage() {
     <main>
       <Navbar />
 
-      <section className="min-h-[78vh] bg-[var(--azva-primary)] pt-40 text-[var(--azva-canvas)] md:pt-48">
-        <div className="container-azva">
-          <p className="eyebrow mb-8 text-[var(--azva-accent)]">PRIZM™</p>
+      <section className="bg-[var(--azva-primary)] text-[var(--azva-canvas)]">
+        <div className="container-azva pb-24 pt-[calc(88px+3rem)] sm:pt-[calc(88px+3.5rem)] lg:pb-28 lg:pt-[calc(88px+4rem)]">
+          <div className="grid gap-14 xl:grid-cols-[1.12fr_0.88fr] xl:items-start xl:gap-16">
+            <div className="max-w-3xl">
+              <p className="eyebrow mb-7 text-[var(--azva-accent)]">
+                PRIZM™
+              </p>
 
-          <h1 className="display-lg max-w-5xl text-[var(--azva-canvas)]">
-            Quantifying confidence in operational intelligence.
-          </h1>
+              <h1 className="max-w-[760px] text-[clamp(3.4rem,6.1vw,6.35rem)] font-medium leading-[0.94] tracking-[-0.075em] text-[var(--azva-canvas)]">
+                Quantifying confidence in operational intelligence.
+              </h1>
 
-          <p className="mt-10 max-w-[720px] text-xl leading-9 text-white/72">
-            PRIZM™ is AZVA&apos;s proprietary framework for evaluating automation
-            readiness, transformation potential, and unrealized enterprise value.
-          </p>
+              <p className="mt-10 max-w-[660px] text-lg leading-8 text-white/72 sm:text-xl sm:leading-9">
+                PRIZM™ is AZVA&apos;s proprietary framework for evaluating automation
+                readiness, transformation potential, and unrealized enterprise value.
+              </p>
 
-          <div className="mt-10">
-            <ButtonLink href="#request-access" variant="secondary">
-              Request Access
-            </ButtonLink>
+              <div className="mt-10">
+                <ButtonLink
+                  href="#request-access"
+                  variant="secondary"
+                  className="border-white/30 bg-[var(--azva-canvas)] text-[var(--azva-primary)] hover:border-[var(--azva-accent)] hover:bg-white"
+                >
+                  Request Access
+                </ButtonLink>
+              </div>
+            </div>
+
+            <div className="mx-auto w-full max-w-[560px] xl:mt-[4.2rem] xl:justify-self-end">
+              <ConfidenceMatrix />
+            </div>
           </div>
-        </div>
-      </section>
 
-      <section className="bg-[var(--azva-primary)] pb-20 text-[var(--azva-canvas)]">
-        <div className="container-azva grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {indices.map((item) => (
-            <MetricCard
-              key={item.metric}
-              metric={item.metric}
-              label={item.label}
-              dark
-            />
-          ))}
+          <div className="mt-20 border-t border-white/12 pt-10">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {indices.map((item) => (
+                <MetricCard
+                  key={item.metric}
+                  metric={item.metric}
+                  label={item.label}
+                  dark
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
