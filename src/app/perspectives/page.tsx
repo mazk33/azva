@@ -4,6 +4,7 @@ import { Footer } from "@/components/layout/footer";
 import { SectionHeader } from "@/components/ui/section-header";
 import { EditorialCard } from "@/components/ui/editorial-card";
 import { SectionClosing } from "@/components/ui/section-closing";
+import { EditorialSignal } from "@/components/visuals";
 
 export const metadata = {
   title: "Perspectives | AZVA",
@@ -34,19 +35,25 @@ export default function PerspectivesPage() {
     <main>
       <Navbar />
 
-      <section className="min-h-[70vh] pt-40 md:pt-48">
-        <div className="container-azva">
-          <p className="eyebrow mb-8">Perspectives</p>
+      <section className="pb-24 pt-[calc(88px+3rem)] sm:pb-28 sm:pt-[calc(88px+4rem)] lg:pb-32 lg:pt-[calc(88px+5rem)]">
+        <div className="container-azva grid items-start gap-14 xl:grid-cols-[1.08fr_0.92fr] xl:gap-16">
+          <div>
+            <p className="eyebrow mb-8">Perspectives</p>
 
-          <h1 className="display-lg max-w-5xl">
-            Ideas that sharpen judgment.
-          </h1>
+            <h1 className="display-lg max-w-5xl">
+              Ideas that sharpen judgment.
+            </h1>
 
-          <p className="body-lg mt-10 max-w-[680px]">
-            Essays, operating notes, and frameworks on strategy, transformation,
-            operational intelligence, venture building, and the discipline of
-            aligned execution.
-          </p>
+            <p className="body-lg mt-10 max-w-[680px]">
+              Essays, operating notes, and frameworks on strategy,
+              transformation, operational intelligence, venture building, and
+              the discipline of aligned execution.
+            </p>
+          </div>
+
+          <div className="mx-auto w-full max-w-[560px] xl:mt-[4.2rem] xl:justify-self-end">
+            <EditorialSignal />
+          </div>
         </div>
       </section>
 

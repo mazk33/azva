@@ -3,6 +3,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { SectionHeader } from "@/components/ui/section-header";
 import { SectionClosing } from "@/components/ui/section-closing";
+import { VentureNetwork } from "@/components/visuals";
 
 export const metadata = {
   title: "Ventures | AZVA",
@@ -51,18 +52,24 @@ export default function VenturesPage() {
     <main>
       <Navbar />
 
-      <section className="min-h-[56vh] pt-36 md:pt-44">
-        <div className="container-azva">
-          <p className="eyebrow mb-8">Ventures</p>
+      <section className="pb-24 pt-[calc(88px+3rem)] sm:pb-28 sm:pt-[calc(88px+4rem)] lg:pb-32 lg:pt-[calc(88px+5rem)]">
+        <div className="container-azva grid items-start gap-14 xl:grid-cols-[1.08fr_0.92fr] xl:gap-16">
+          <div>
+            <p className="eyebrow mb-8">Ventures</p>
 
-          <h1 className="display-lg max-w-5xl">
-            Capital. Capability. Conviction.
-          </h1>
+            <h1 className="display-lg max-w-5xl">
+              Capital. Capability. Conviction.
+            </h1>
 
-          <p className="body-lg mt-10 max-w-[680px]">
-            AZVA selectively partners with founders and leadership teams where
-            values, ambition, and execution are deeply aligned.
-          </p>
+            <p className="body-lg mt-10 max-w-[680px]">
+              AZVA selectively partners with founders and leadership teams where
+              values, ambition, and execution are deeply aligned.
+            </p>
+          </div>
+
+          <div className="mx-auto w-full max-w-[560px] xl:mt-[4.2rem] xl:justify-self-end">
+            <VentureNetwork />
+          </div>
         </div>
       </section>
 
@@ -97,11 +104,7 @@ export default function VenturesPage() {
 
       <section className="section-azva azva-chapter">
         <div className="container-azva">
-          <SectionHeader
-            label="Modes"
-            title="How AZVA participates."
-            index="02"
-          />
+          <SectionHeader label="Modes" title="How AZVA participates." index="02" />
 
           <div className="mt-20 divide-y divide-[var(--azva-border)] border-y border-[var(--azva-border)]">
             {partnershipModes.map((item, index) => (
@@ -162,7 +165,7 @@ export default function VenturesPage() {
             </p>
           </div>
 
-          <Link href="mailto:hello@azva.us" className="btn-primary w-fit">
+          <Link href="/connect" className="btn-primary w-fit">
             Start the Conversation
           </Link>
         </div>

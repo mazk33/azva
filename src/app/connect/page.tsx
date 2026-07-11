@@ -3,6 +3,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { SectionHeader } from "@/components/ui/section-header";
 import { SectionClosing } from "@/components/ui/section-closing";
+import { ConversationSignal } from "@/components/visuals";
 
 export const metadata = {
   title: "Connect | AZVA",
@@ -24,7 +25,7 @@ export default function ConnectPage() {
     <main>
       <Navbar />
 
-      <section className="min-h-[72vh] pt-40 md:pt-48">
+      <section className="pb-24 pt-[calc(88px+3rem)] sm:pb-28 sm:pt-[calc(88px+4rem)] lg:pb-32 lg:pt-[calc(88px+5rem)]">
         <div className="container-azva">
           <p className="eyebrow mb-8">Connect</p>
 
@@ -40,23 +41,29 @@ export default function ConnectPage() {
       </section>
 
       <section className="section-azva azva-chapter">
-        <div className="container-azva grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
-          <SectionHeader
-            label="Inquiry"
-            title="Tell us what you are trying to clarify."
-            index="01"
-          />
+        <div className="container-azva grid items-start gap-14 xl:grid-cols-[0.95fr_1.05fr]">
+          <div>
+            <SectionHeader
+              label="Inquiry"
+              title="Tell us what you are trying to clarify."
+              index="01"
+            />
 
-          <div className="space-y-8">
-            <p className="body-lg max-w-2xl">
-              AZVA works with a limited number of aligned leaders, companies,
-              investors, and ventures. Share the context, the decision, or the
-              opportunity you are navigating.
-            </p>
+            <div className="mt-8 space-y-8">
+              <p className="body-lg max-w-2xl">
+                AZVA works with a limited number of aligned leaders, companies,
+                investors, and ventures. Share the context, the decision, or the
+                opportunity you are navigating.
+              </p>
 
-            <Link href="mailto:hello@azva.us" className="btn-primary w-fit">
-              hello@azva.us
-            </Link>
+              <Link href="mailto:hello@azva.us" className="btn-primary w-fit">
+                hello@azva.us
+              </Link>
+            </div>
+          </div>
+
+          <div className="mx-auto w-full max-w-[560px] xl:mt-[4.2rem] xl:justify-self-end">
+            <ConversationSignal />
           </div>
         </div>
       </section>

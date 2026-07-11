@@ -12,7 +12,7 @@ export function GeometryFrame({
   return (
     <div
       className={cn(
-        "card-azva relative block aspect-square w-full overflow-hidden",
+        "card-azva relative block aspect-square w-full overflow-hidden bg-[var(--azva-canvas)]",
         "min-h-[340px] sm:min-h-[440px] lg:min-h-[560px]",
         className
       )}

@@ -26,7 +26,7 @@ export default function AboutPage() {
     <main>
       <Navbar />
 
-      <section className="min-h-[72vh] pt-40 md:pt-48">
+      <section className="pb-24 pt-[calc(88px+3rem)] sm:pb-28 sm:pt-[calc(88px+4rem)] lg:pb-32 lg:pt-[calc(88px+5rem)]">
         <div className="container-azva">
           <p className="eyebrow mb-8">About</p>
 
@@ -34,10 +34,9 @@ export default function AboutPage() {
             Built from experience. Driven by purpose.
           </h1>
 
-          <p className="body-lg mt-8 max-w-2xl">
-            AZVA turns operating experience into judgment, judgment into alignment,
-            and alignment into enduring value through disciplined strategy, systems
-            thinking, and execution.
+          <p className="body-lg mt-10 max-w-[680px]">
+            AZVA helps leaders bring strategy, judgment, systems, technology,
+            capital, and execution into one coherent operating model.
           </p>
         </div>
       </section>
@@ -72,7 +71,7 @@ export default function AboutPage() {
       </section>
 
       <section className="section-azva azva-chapter">
-        <div className="container-azva grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="container-azva grid items-start gap-14 xl:grid-cols-[0.95fr_1.05fr]">
           <div>
             <SectionHeader
               label="Operating Logic"
@@ -81,35 +80,46 @@ export default function AboutPage() {
             />
 
             <p className="body-lg mt-8 max-w-2xl">
-              AZVA brings operating experience, strategic judgment, organizational
-              alignment, and disciplined execution into one coherent operating model
-              designed to create enduring value.
+              AZVA brings operating experience, strategic judgment,
+              organizational alignment, and disciplined execution into one
+              coherent operating model designed to create enduring value.
             </p>
           </div>
 
-          <OperatingConvergence />
+          <div className="mx-auto w-full max-w-[560px] xl:mt-[4.2rem] xl:justify-self-end">
+            <OperatingConvergence />
+          </div>
         </div>
       </section>
 
       <section className="section-azva azva-chapter">
-        <div className="container-azva grid gap-14 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
-          <div>
-            <Image
-              src="/brand/maz-headshot.png"
-              alt="Mazhar Khan"
-              width={520}
-              height={650}
-              className="aspect-[4/5] w-full object-cover"
-              priority
-            />
+        <div className="container-azva grid gap-12 lg:grid-cols-[0.62fr_1.38fr] lg:items-start lg:gap-16">
+          <div className="mx-auto w-full max-w-[380px] lg:mx-0">
+            <div className="relative overflow-hidden rounded-[34px] border border-[var(--azva-border)] bg-[var(--azva-canvas)] p-4 sm:p-5">
+              <div className="pointer-events-none absolute inset-8 rounded-[24px] border border-white/35" />
+
+              <Image
+                src="/brand/maz-headshot.png"
+                alt="Mazhar Khan"
+                width={420}
+                height={525}
+                className="
+        aspect-[4/5]
+        w-full
+        rounded-[24px]
+        object-cover
+        object-[50%_24%]
+        brightness-[1.04]
+        contrast-[0.94]
+        saturate-[0.96]
+      "
+                priority
+              />
+            </div>
           </div>
 
           <div>
-            <SectionHeader
-              label="Founder"
-              title="Mazhar Khan"
-              index="03"
-            />
+            <SectionHeader label="Founder" title="Mazhar Khan" index="03" />
 
             <div className="mt-8 space-y-6 body-lg">
               <p>
@@ -152,11 +162,7 @@ export default function AboutPage() {
       <section className="section-azva azva-chapter">
         <div className="container-azva grid items-end gap-12 lg:grid-cols-[1fr_0.9fr]">
           <div>
-            <SectionHeader
-              label="Connect"
-              title="Start with clarity."
-              index="04"
-            />
+            <SectionHeader label="Connect" title="Start with clarity." index="04" />
 
             <p className="body-lg mt-8 max-w-2xl">
               If you are building, transforming, investing, or deciding through
@@ -164,7 +170,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <Link href="mailto:hello@azva.us" className="btn-primary w-fit">
+          <Link href="/connect" className="btn-primary w-fit">
             Start the Conversation
           </Link>
         </div>

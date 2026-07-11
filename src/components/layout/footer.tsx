@@ -2,13 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 const links = [
-  ["Approach", "#approach"],
-  ["Capabilities", "#capabilities"],
-  ["Ventures", "#ventures"],
-  ["PRIZM", "#prizm"],
-  ["Thinking", "#thinking"],
-  ["Contact", "#contact"],
+  ["Approach", "/#approach"],
+  ["Disciplines", "/#disciplines"],
+  ["Ventures", "/ventures"],
+  ["PRIZM", "/prizm"],
+  ["Perspectives", "/perspectives"],
+  ["About", "/about"],
   ["Manifesto", "/manifesto"],
+  ["Connect", "/connect"],
 ];
 
 export function Footer() {
