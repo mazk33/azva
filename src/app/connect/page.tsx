@@ -2,7 +2,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { SectionHeader } from "@/components/ui/section-header";
 import { SectionClosing } from "@/components/ui/section-closing";
-import { ConversationSignal } from "@/components/visuals";
+import { ConversationSignal } from "@/components/brand";
 import { ConversationForm } from "@/components/forms/conversation-form";
 
 export const metadata = {

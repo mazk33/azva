@@ -2,8 +2,8 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { GeometryFrame } from "./GeometryFrame";
-import { AzvaCoreMark } from "./AzvaCoreMark";
+import { GeometryFrame } from "../frames/GeometryFrame";
+import { AzvaCoreMark } from "../marks/AzvaCoreMark";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 

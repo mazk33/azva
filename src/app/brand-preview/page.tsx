@@ -3,7 +3,7 @@ import {
   AzvaMarkAxis,
   AzvaMarkConvergence,
   AzvaMarkMonogram,
-} from "@/components/visuals";
+} from "@/components/brand";
 
 const marks = [
   {

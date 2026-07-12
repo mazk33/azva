@@ -4,7 +4,7 @@ import { Footer } from "@/components/layout/footer";
 import { SectionHeader } from "@/components/ui/section-header";
 import { EditorialCard } from "@/components/ui/editorial-card";
 import { SectionClosing } from "@/components/ui/section-closing";
-import { EditorialSignal } from "@/components/visuals";
+import { EditorialSignal } from "@/components/brand";
 import { Lift } from "@/components/ui/fade-in";
 
 export const metadata = {

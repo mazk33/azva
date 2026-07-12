@@ -5,7 +5,7 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { MetricCard } from "@/components/ui/metric-card";
 import { SectionClosing } from "@/components/ui/section-closing";
 import { ButtonLink } from "@/components/ui/button";
-import { ConfidenceMatrix } from "@/components/visuals";
+import { ConfidenceMatrix } from "@/components/brand";
 
 export const metadata = {
   title: "PRIZM | AZVA",

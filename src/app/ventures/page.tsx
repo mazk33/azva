@@ -3,7 +3,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { SectionHeader } from "@/components/ui/section-header";
 import { SectionClosing } from "@/components/ui/section-closing";
-import { VentureNetwork } from "@/components/visuals";
+import { VentureNetwork } from "@/components/brand";
 import { Lift } from "@/components/ui/fade-in";
 
 export const metadata = {

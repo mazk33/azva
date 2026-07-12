@@ -7,7 +7,7 @@ import { FadeIn, Reveal, Lift } from "@/components/ui/fade-in";
 import { SectionHeader } from "@/components/ui/section-header";
 import { EditorialCard } from "@/components/ui/editorial-card";
 import { MetricCard } from "@/components/ui/metric-card";
-import { AlignmentGrid, SignalDivider } from "@/components/visuals";
+import { AlignmentGrid, SignalDivider } from "@/components/brand";
 
 export const metadata = {
   title: "Perspectives | AZVA",
