@@ -4,12 +4,14 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { SectionClosing } from "@/components/ui/section-closing";
 import { ConversationSignal } from "@/components/brand";
 import { ConversationForm } from "@/components/forms/conversation-form";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Connect | AZVA",
-  description:
-    "Start a conversation with AZVA about strategy, transformation, operational intelligence, venture partnerships, or PRIZM.",
-};
+export const metadata = createPageMetadata({
+  title: "Start the Conversation",
+  description: "Start a conversation with AZVA about strategy, transformation, operational intelligence, venture partnerships, or PRIZM.",
+  path: "/connect",
+});
+
 
 const paths = [
   "Strategic advisory",
@@ -22,7 +24,7 @@ const paths = [
 
 export default function ConnectPage() {
   return (
-    <main>
+    <main id="main-content">
       <Navbar />
 
       <section className="pb-24 pt-[calc(88px+3rem)] sm:pb-28 sm:pt-[calc(88px+4rem)] lg:pb-32 lg:pt-[calc(88px+5rem)]">

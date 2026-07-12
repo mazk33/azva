@@ -37,7 +37,7 @@ export function Navbar() {
     <>
       <header className="fixed left-0 top-0 z-[10000] w-full border-b border-black/8 bg-[var(--azva-canvas)]/95 backdrop-blur-xl">
         <div className="container-azva flex h-[88px] items-center justify-between">
-          <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
+          <Link href="/" className="flex items-center" aria-label="AZVA home" onClick={() => setOpen(false)}>
             <Image
               src="/brand/azva-logo.png"
               alt="AZVA"
@@ -48,7 +48,7 @@ export function Navbar() {
             />
           </Link>
 
-          <nav className="hidden items-center gap-12 lg:flex">
+          <nav aria-label="Primary navigation" className="hidden items-center gap-12 lg:flex">
             {navItems.map((item) => (
               <Link
                 key={item.label}

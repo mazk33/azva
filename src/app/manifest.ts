@@ -5,15 +5,20 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "AZVA",
     short_name: "AZVA",
     description:
-      "Strategic transformation, operational intelligence, venture partnerships, and PRIZM.",
+      "Purpose Aligned. Value Delivered.",
     start_url: "/",
     display: "standalone",
     background_color: "#F8F4EE",
     theme_color: "#1E2A38",
     icons: [
       {
-        src: "/brand/azva-logo.png",
+        src: "/icon.png",
         sizes: "512x512",
+        type: "image/png",
+      },
+      {
+        src: "/apple-icon.png",
+        sizes: "180x180",
         type: "image/png",
       },
     ],

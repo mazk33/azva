@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+      <g >
+        <defs>
+          <clipPath id="azvaIconClip">
+            <rect x="24" y="24" width="112" height="112" rx="30"/>
+          </clipPath>
+        </defs>
+
+        <rect
+          x="24"
+          y="24"
+          width="112"
+          height="112"
+          rx="30"
+          fill="#1E2A38"
+        />
+
+        <g clip-path="url(#azvaIconClip)">
+          <path
+            d="M18 142 L142 18"
+            fill="none"
+            stroke="#F8F4EE"
+            stroke-width="20"
+            stroke-linecap="round"
+          />
+          <path
+            d="M43 117 L117 43"
+            fill="none"
+            stroke="#B56E46"
+            stroke-width="10"
+            stroke-linecap="round"
+          />
+          
+        <path
+          d="M48 112 L112 48"
+          fill="none"
+          stroke="#F8F4EE"
+          stroke-width="2"
+          stroke-linecap="round"
+          opacity="0.62"
+        />
+        </g>
+      </g>
+    </svg>

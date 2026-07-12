@@ -1,12 +1,26 @@
 import type { MetadataRoute } from "next";
 
-const routes = ["", "/perspectives", "/prizm", "/ventures", "/about", "/connect"];
+const baseUrl = "https://azva.us";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const routes = [
+    "",
+    "/about",
+    "/ventures",
+    "/prizm",
+    "/perspectives",
+    "/perspectives/operational-leverage-is-designed",
+    "/connect",
+    "/manifesto",
+  ];
+
   return routes.map((route) => ({
-    url: `https://azva.us${route}`,
+    url: `${baseUrl}${route}`,
     lastModified: new Date(),
-    changeFrequency: route === "" ? "weekly" : "monthly",
-    priority: route === "" ? 1 : 0.8,
+    changeFrequency:
+      route === "/perspectives" || route.startsWith("/perspectives/")
+        ? "monthly"
+        : "yearly",
+    priority: route === "" ? 1 : route === "/prizm" ? 0.9 : 0.7,
   }));
 }

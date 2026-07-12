@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Fraunces } from "next/font/google";
 import "./globals.css";
-import { JsonLd } from "@/components/seo/json-ld";
+import { StructuredData } from "@/components/seo/structured-data";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -22,17 +22,20 @@ export const metadata: Metadata = {
   description:
     "AZVA partners with founders, executives, investors, and enterprises to align strategy, operations, technology, and capital into enduring value.",
   keywords: [
-    "strategy",
+    "strategic advisory",
     "enterprise transformation",
     "operational intelligence",
     "venture partnerships",
     "PRIZM",
     "automation readiness",
-    "strategic advisory",
   ],
-  authors: [{ name: "AZVA" }],
+  authors: [{ name: "AZVA", url: "https://azva.us" }],
   creator: "AZVA",
   publisher: "AZVA",
+  category: "business",
+  alternates: {
+    canonical: "https://azva.us",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -51,10 +54,20 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
   icons: {
-    icon: "/brand/azva-logo.png",
-    apple: "/brand/azva-logo.png",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    apple: "/apple-icon.png",
   },
   applicationName: "AZVA",
 };
@@ -71,8 +84,26 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
       <body>
-        <JsonLd />
-        {children}</body>
+        <a href="#main-content" className="azva-skip-link">
+          Skip to main content
+        </a>
+        <StructuredData
+          data={{
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "AZVA",
+            url: "https://azva.us",
+            logo: "https://azva.us/brand/azva-logo.png",
+            description:
+              "AZVA aligns strategy, operations, technology, and capital into enduring value.",
+            founder: {
+              "@type": "Person",
+              name: "Mazhar Khan",
+            },
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

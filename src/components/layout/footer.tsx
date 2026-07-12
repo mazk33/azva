@@ -14,7 +14,7 @@ const links = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-[var(--azva-border)] py-14">
+    <footer aria-label="Site footer" className="border-t border-[var(--azva-border)] py-14">
       <div className="container-azva grid gap-10 md:grid-cols-[1fr_1.2fr] md:items-start">
         <div>
           <Image

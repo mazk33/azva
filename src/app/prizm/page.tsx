@@ -6,12 +6,14 @@ import { MetricCard } from "@/components/ui/metric-card";
 import { SectionClosing } from "@/components/ui/section-closing";
 import { ButtonLink } from "@/components/ui/button";
 import { ConfidenceMatrix } from "@/components/brand";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "PRIZM | AZVA",
-  description:
-    "PRIZM is AZVA’s proprietary operational intelligence framework for evaluating automation readiness, transformation potential, and unrealized enterprise value.",
-};
+export const metadata = createPageMetadata({
+  title: "PRIZM | Operational Intelligence",
+  description: "PRIZM is AZVA's proprietary framework for evaluating automation readiness, transformation potential, and unrealized enterprise value.",
+  path: "/prizm",
+});
+
 
 const indices = [
   {
@@ -47,7 +49,7 @@ const useCases = [
 
 export default function PrizmPage() {
   return (
-    <main>
+    <main id="main-content">
       <Navbar />
 
       <section className="bg-[var(--azva-primary)] text-[var(--azva-canvas)]">

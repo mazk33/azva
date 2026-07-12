@@ -8,12 +8,14 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { EditorialCard } from "@/components/ui/editorial-card";
 import { MetricCard } from "@/components/ui/metric-card";
 import { AlignmentGrid, SignalDivider } from "@/components/brand";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Perspectives | AZVA",
-  description:
-    "Essays, operating notes, and frameworks from AZVA on strategy, transformation, operational intelligence, venture building, and aligned execution.",
-};
+export const metadata = createPageMetadata({
+  title: "AZVA | Purpose Aligned. Value Delivered.",
+  description: "AZVA partners with founders, executives, investors, and enterprises to align strategy, operations, technology, and capital into enduring value.",
+  path: "/",
+});
+
 
 const capabilities = [
   {
@@ -54,7 +56,7 @@ const prizmScores = [
 
 export default function Home() {
   return (
-    <main>
+    <main id="main-content">
       <Navbar />
 
       <section className="min-h-[calc(100svh-88px)] pb-18 pt-28 md:pb-22 md:pt-36">

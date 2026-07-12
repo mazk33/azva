@@ -9,12 +9,14 @@ import {
   Stagger,
   StaggerItem,
 } from "@/components/ui/fade-in";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "About | AZVA",
-  description:
-    "AZVA exists to help leaders navigate complexity with clarity, alignment, and disciplined judgment.",
-};
+export const metadata = createPageMetadata({
+  title: "About AZVA",
+  description: "Learn how AZVA combines operating experience, strategic judgment, organizational alignment, and disciplined execution to create enduring value.",
+  path: "/about",
+});
+
 
 const experience = [
   "Enterprise transformation",
@@ -27,7 +29,7 @@ const experience = [
 
 export default function AboutPage() {
   return (
-    <main>
+    <main id="main-content">
       <Navbar />
 
       <section className="pb-24 pt-[calc(88px+3rem)] sm:pb-28 sm:pt-[calc(88px+4rem)] lg:pb-32 lg:pt-[calc(88px+5rem)]">

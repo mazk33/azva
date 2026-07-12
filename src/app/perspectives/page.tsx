@@ -6,12 +6,14 @@ import { EditorialCard } from "@/components/ui/editorial-card";
 import { SectionClosing } from "@/components/ui/section-closing";
 import { EditorialSignal } from "@/components/brand";
 import { Lift } from "@/components/ui/fade-in";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Perspectives | AZVA",
-  description:
-    "Essays, operating notes, and frameworks from AZVA on strategy, transformation, operational intelligence, venture building, and aligned execution.",
-};
+export const metadata = createPageMetadata({
+  title: "Perspectives",
+  description: "Essays, operating notes, and frameworks from AZVA on strategy, transformation, operational intelligence, venture building, and aligned execution.",
+  path: "/perspectives",
+});
+
 
 const perspectives = [
   {
@@ -33,7 +35,7 @@ const perspectives = [
 
 export default function PerspectivesPage() {
   return (
-    <main>
+    <main id="main-content">
       <Navbar />
 
       <section className="pb-24 pt-[calc(88px+3rem)] sm:pb-28 sm:pt-[calc(88px+4rem)] lg:pb-32 lg:pt-[calc(88px+5rem)]">

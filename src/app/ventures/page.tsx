@@ -5,12 +5,14 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { SectionClosing } from "@/components/ui/section-closing";
 import { VentureNetwork } from "@/components/brand";
 import { Lift } from "@/components/ui/fade-in";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Ventures | AZVA",
-  description:
-    "AZVA selectively partners with founders and leadership teams where values, ambition, and execution are deeply aligned.",
-};
+export const metadata = createPageMetadata({
+  title: "Ventures",
+  description: "AZVA selectively partners with founders and leadership teams where values, ambition, capability, and execution are deeply aligned.",
+  path: "/ventures",
+});
+
 
 const partnershipModes = [
   {
@@ -50,7 +52,7 @@ const filters = [
 
 export default function VenturesPage() {
   return (
-    <main>
+    <main id="main-content">
       <Navbar />
 
       <section className="pb-24 pt-[calc(88px+3rem)] sm:pb-28 sm:pt-[calc(88px+4rem)] lg:pb-32 lg:pt-[calc(88px+5rem)]">

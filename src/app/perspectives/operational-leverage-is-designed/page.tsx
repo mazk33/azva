@@ -2,12 +2,16 @@ import Link from "next/link";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { SectionClosing } from "@/components/ui/section-closing";
+import { createPageMetadata } from "@/lib/seo";
+import { StructuredData } from "@/components/seo/structured-data";
 
-export const metadata = {
-  title: "Operational Leverage Is Not Found. It Is Designed. | AZVA",
-  description:
-    "Why enterprise transformation depends less on ambition and more on alignment between strategy, systems, people, and execution.",
-};
+export const metadata = createPageMetadata({
+  title: "Operational Leverage Is Not Found. It Is Designed.",
+  description: "Why enterprise transformation depends less on ambition and more on alignment between strategy, systems, people, technology, and execution.",
+  path: "/perspectives/operational-leverage-is-designed",
+  type: "article",
+});
+
 
 const principles = [
   {
@@ -26,7 +30,27 @@ const principles = [
 
 export default function OperationalLeverageNotePage() {
   return (
-    <main>
+    <main id="main-content">
+      <StructuredData
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: "Operational Leverage Is Not Found. It Is Designed.",
+          description:
+            "Why enterprise transformation depends less on ambition and more on alignment between strategy, systems, people, technology, and execution.",
+          author: {
+            "@type": "Person",
+            name: "Mazhar Khan",
+          },
+          publisher: {
+            "@type": "Organization",
+            name: "AZVA",
+            url: "https://azva.us",
+          },
+          mainEntityOfPage:
+            "https://azva.us/perspectives/operational-leverage-is-designed",
+        }}
+      />
       <Navbar />
 
       <article>
