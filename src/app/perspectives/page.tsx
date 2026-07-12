@@ -5,6 +5,7 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { EditorialCard } from "@/components/ui/editorial-card";
 import { SectionClosing } from "@/components/ui/section-closing";
 import { EditorialSignal } from "@/components/visuals";
+import { Lift } from "@/components/ui/fade-in";
 
 export const metadata = {
   title: "Perspectives | AZVA",
@@ -89,7 +90,7 @@ export default function PerspectivesPage() {
 
           <div className="mt-16 divide-y divide-[var(--azva-border)] border-y border-[var(--azva-border)]">
             {perspectives.slice(1).map((item, index) => (
-              <article
+              <Lift
                 key={item.title}
                 className="grid gap-6 py-10 md:grid-cols-[0.18fr_0.42fr_0.4fr]"
               >
@@ -107,7 +108,7 @@ export default function PerspectivesPage() {
                 </div>
 
                 <p className="body-md max-w-xl">{item.copy}</p>
-              </article>
+              </Lift>
             ))}
           </div>
         </div>

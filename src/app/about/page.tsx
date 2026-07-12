@@ -5,6 +5,10 @@ import { Footer } from "@/components/layout/footer";
 import { SectionHeader } from "@/components/ui/section-header";
 import { SectionClosing } from "@/components/ui/section-closing";
 import { OperatingConvergence } from "@/components/visuals";
+import {
+  Stagger,
+  StaggerItem,
+} from "@/components/ui/fade-in";
 
 export const metadata = {
   title: "About | AZVA",
@@ -103,16 +107,7 @@ export default function AboutPage() {
                 alt="Mazhar Khan"
                 width={420}
                 height={525}
-                className="
-        aspect-[4/5]
-        w-full
-        rounded-[24px]
-        object-cover
-        object-[50%_20%]
-        brightness-[1.04]
-        contrast-[0.94]
-        saturate-[0.96]
-      "
+                className="aspect-[4/5] w-full rounded-[24px] object-cover object-[50%_20%] brightness-[1.04] contrast-[0.94] saturate-[0.96] "
                 priority
               />
             </div>
@@ -141,16 +136,16 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="mt-10 grid gap-3 sm:grid-cols-2">
+            <Stagger className="mt-10 grid gap-3 sm:grid-cols-2">
               {experience.map((item) => (
-                <div
+                <StaggerItem
                   key={item}
                   className="border-t border-[var(--azva-border)] py-4 text-lg tracking-[-0.03em] text-[var(--azva-primary)]"
                 >
                   {item}
-                </div>
+                </StaggerItem>
               ))}
-            </div>
+            </Stagger>
           </div>
         </div>
       </section>

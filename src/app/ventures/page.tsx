@@ -4,6 +4,7 @@ import { Footer } from "@/components/layout/footer";
 import { SectionHeader } from "@/components/ui/section-header";
 import { SectionClosing } from "@/components/ui/section-closing";
 import { VentureNetwork } from "@/components/visuals";
+import { Lift } from "@/components/ui/fade-in";
 
 export const metadata = {
   title: "Ventures | AZVA",
@@ -108,7 +109,7 @@ export default function VenturesPage() {
 
           <div className="mt-20 divide-y divide-[var(--azva-border)] border-y border-[var(--azva-border)]">
             {partnershipModes.map((item, index) => (
-              <article
+              <Lift
                 key={item.title}
                 className="grid gap-6 py-10 md:grid-cols-[0.15fr_0.35fr_0.5fr] md:items-start"
               >
@@ -121,7 +122,7 @@ export default function VenturesPage() {
                 </h2>
 
                 <p className="body-md max-w-2xl">{item.copy}</p>
-              </article>
+              </Lift>
             ))}
           </div>
         </div>

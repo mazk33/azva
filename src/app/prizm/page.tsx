@@ -51,7 +51,7 @@ export default function PrizmPage() {
       <Navbar />
 
       <section className="bg-[var(--azva-primary)] text-[var(--azva-canvas)]">
-        <div className="container-azva pb-24 pt-[calc(88px+3rem)] sm:pt-[calc(88px+3.5rem)] lg:pb-28 lg:pt-[calc(88px+4rem)]">
+        <div className="container-azva pb-20 pt-[calc(88px+2.5rem)] sm:pb-24 sm:pt-[calc(88px+3rem)] lg:pb-24 lg:pt-[calc(88px+3.5rem)]">
           <div className="grid gap-14 xl:grid-cols-[1.12fr_0.88fr] xl:items-start xl:gap-16">
             <div className="max-w-3xl">
               <p className="eyebrow mb-7 text-[var(--azva-accent)]">
@@ -62,14 +62,14 @@ export default function PrizmPage() {
                 Quantifying confidence in operational intelligence.
               </h1>
 
-              <p className="mt-10 max-w-[660px] text-lg leading-8 text-white/72 sm:text-xl sm:leading-9">
+              <p className="mt-8 max-w-[660px] text-lg leading-8 text-white/72 sm:text-xl sm:leading-9">
                 PRIZM™ is AZVA&apos;s proprietary framework for evaluating automation
                 readiness, transformation potential, and unrealized enterprise value.
               </p>
 
-              <div className="mt-10">
+              <div className="mt-8">
                 <ButtonLink
-                  href="#request-access"
+                  href="/connect"
                   variant="secondary"
                   className="border-white/30 bg-[var(--azva-canvas)] text-[var(--azva-primary)] hover:border-[var(--azva-accent)] hover:bg-white"
                 >
@@ -91,6 +91,7 @@ export default function PrizmPage() {
                   metric={item.metric}
                   label={item.label}
                   dark
+                  elevated
                 />
               ))}
             </div>
@@ -205,9 +206,13 @@ export default function PrizmPage() {
             </p>
           </div>
 
-          <Link href="mailto:hello@azva.us" className="btn-primary w-fit">
+          <ButtonLink
+            href="#request-access"
+            variant="secondary"
+            className="border-white/30 bg-[var(--azva-canvas)] text-[var(--azva-primary)] hover:border-[var(--azva-accent)] hover:bg-white"
+          >
             Request Access
-          </Link>
+          </ButtonLink>
         </div>
       </section>
 

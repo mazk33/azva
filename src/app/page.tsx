@@ -57,7 +57,7 @@ export default function Home() {
     <main>
       <Navbar />
 
-      <section className="min-h-[88vh] pt-28 md:min-h-screen md:pt-36">
+      <section className="min-h-[calc(100svh-88px)] pb-18 pt-28 md:pb-22 md:pt-36">
         <div className="container-azva grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
           <FadeIn>
             <div>
@@ -73,14 +73,14 @@ export default function Home() {
                 Delivered.
               </h1>
 
-              <p className="body-lg mt-14 max-w-[490px]">
+              <p className="body-lg mt-8 max-w-[680px]">
                 AZVA partners with founders, executives, investors, and enterprises to
                 align strategy, operations, technology, and capital into enduring value.
               </p>
 
-              <div className="mt-12 flex flex-wrap gap-5">
-                <ButtonLink href="#contact">Start the Conversation</ButtonLink>
-                <ButtonLink href="#perspectives" variant="secondary">
+              <div className="mt-10 flex flex-wrap gap-5">
+                <ButtonLink href="/connect">Start the Conversation</ButtonLink>
+                <ButtonLink href="/perspectives" variant="secondary">
                   Explore Perspectives
                 </ButtonLink>
               </div>
@@ -214,7 +214,7 @@ export default function Home() {
             </div>
             <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {prizmScores.map(([score, label]) => (
-                <MetricCard key={score} metric={score} label={label} dark />
+                <MetricCard key={score} metric={score} label={label} dark elevated />
               ))}
             </div>
           </div>
@@ -223,15 +223,20 @@ export default function Home() {
 
       <FadeIn>
         <section id="about" className="section-azva azva-chapter">
-          <div className="container-azva grid gap-12 lg:grid-cols-[0.7fr_1.3fr]">
-            <div>
-              <Image
-                src="/brand/maz-headshot.png"
-                alt="Mazhar Khan"
-                width={420}
-                height={560}
-                className="aspect-[4/5] w-full object-cover"
-              />
+          <div className="container-azva grid gap-12 lg:grid-cols-[0.62fr_1.38fr] lg:items-start lg:gap-16">
+            <div className="mx-auto w-full max-w-[380px] lg:mx-0">
+              <div className="relative overflow-hidden rounded-[34px] border border-[var(--azva-border)] bg-[var(--azva-canvas)] p-4 sm:p-5">
+                <div className="pointer-events-none absolute inset-8 rounded-[24px] border border-white/35" />
+
+                <Image
+                  src="/brand/maz-headshot.png"
+                  alt="Mazhar Khan"
+                  width={420}
+                  height={525}
+                  className="aspect-[4/5] w-full rounded-[24px] object-cover object-[50%_20%] brightness-[1.04] contrast-[0.94] saturate-[0.96] "
+                  priority
+                />
+              </div>
             </div>
 
             <div>
@@ -300,7 +305,7 @@ export default function Home() {
               </p>
             </div>
 
-            <ButtonLink href="mailto:hello@azva.us" className="w-fit">
+            <ButtonLink href="/connect" className="w-fit">
               Start the Conversation
             </ButtonLink>
           </div>

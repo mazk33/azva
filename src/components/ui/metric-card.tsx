@@ -5,13 +5,15 @@ type MetricCardProps = {
   label: string;
   dark?: boolean;
   className?: string;
+  elevated?: boolean;
 };
 
-export function MetricCard({ metric, label, dark = false, className }: MetricCardProps) {
+export function MetricCard({ metric, label, dark = false, className, elevated = false }: MetricCardProps) {
   return (
     <div
       className={cn(
-        "rounded-[28px] border p-6",
+        "rounded-[28px] border p-6 transition-transform will-change-transform",
+        elevated && "card-azva",
         dark
           ? "border-white/12 bg-white/[0.04]"
           : "border-[var(--azva-border)] bg-[var(--azva-surface)]/60",
